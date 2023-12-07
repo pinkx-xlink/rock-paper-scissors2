@@ -24,14 +24,22 @@
         } else if {
             (playerSelection == "paper" && computerSelection == "rock") {
             return("you win!")
+        } else if {
+            (playerSelection == "rock" && computerSelection == "paper") {
+            return("you LOSE!")
+        } else if {
+            (playerSelection == "paper" && computerSelection == "scissors") {
+            return("you LOSE!")
+        } else if {
+            (playerSelection == "scissors" && computerSelection == "rock") {
+            return("you LOSE!")
         }
         //use return, not console.log
     }
 
-    game(
+    game()
         //loop playRound x5
         //best out of 5 rounds is winner
         //console.log each round
-    )
 </script>
 </html>
