@@ -14,11 +14,12 @@
     prompt("ROCK, PAPER, or SCISSORS?")
 
     function getComputerChoice(array) {
-        array[Math.floor(Math.random() * array.length)];
-        const array = ["rock", "paper", "scissors"];
-        const computerChoice = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
-        console.log(computerChoice);
-    } //randomly chose 1
+        return array[Math.floor(Math.random() * array.length)];
+    }
+    const array = ["rock", "paper", "scissors"];
+    const computerChoice = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
+    console.log(computerChoice);
+     //randomly chose 1
 
     playRound(playerSelection, computerSelection) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
