@@ -13,6 +13,7 @@
 
 <script>
     document.getElementById("play").addEventListener("click", playRound);
+
     function getComputerChoice(array) {
         return array[Math.floor(Math.random() * array.length)];
     }
@@ -25,11 +26,11 @@
     let computerScore = 0;
 
     function win(playerScore) {
-        ++playerScore;
+        return ++playerScore;
         console.log("You win!");
     }
     function lose(computerScore) {
-        ++computerScore;
+        return ++computerScore;
         console.log("you lose lol");
     }
 
