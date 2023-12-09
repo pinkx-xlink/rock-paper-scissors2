@@ -35,14 +35,11 @@
 
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
-            win();
-            return("you win!")
+            return win();
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
-            win();
-            return("you win!")
+            return win();
         } else if (playerSelection == "paper" && computerSelection == "rock") {
-            win();
-            return("you win!")
+            return win();
         } else if (playerSelection == "rock" && computerSelection == "paper") {
             lose();
             return("you LOSE!")
