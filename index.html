@@ -22,12 +22,15 @@
     console.log(computerChoice);
      //randomly chose 1
 
-    let playerScore =
-    let computerScore = 
+    let playerScore = win();
+    let computerScore = win();
 
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
-            ++playerScore;
+            function win(playerScore){
+                ++playerScore;
+            }
+            
             return("you win!")
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
             ++playerScore;
