@@ -13,10 +13,6 @@
 
 <script>
     document.getElementById("play").addEventListener("click", playRound);
-
-    
-    
-
     function getComputerChoice(array) {
         return array[Math.floor(Math.random() * array.length)];
     }
@@ -36,7 +32,6 @@
         ++computerScore;
         console.log("you lose lol");
     }
-
 
     function playRound() {
         let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
