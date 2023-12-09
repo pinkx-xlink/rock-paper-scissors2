@@ -14,14 +14,7 @@
 <script>
     document.getElementById("play").addEventListener("click", playRound);
 
-    function getComputerChoice(array) {
-        return array[Math.floor(Math.random() * array.length)];
-    }
-    const array = ["rock", "paper", "scissors"];
-    const computerSelection = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
-    console.log(`Computer chose ${computerSelection}`);
-     //randomly chose 1
-
+    
     let playerScore = 0;
     let computerScore = 0;
 
@@ -37,6 +30,15 @@
     function playRound() {
         let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
             console.log(`You chose ${playerSelection}!`);
+
+        function getComputerChoice(array) {
+            return array[Math.floor(Math.random() * array.length)];
+            }
+            const array = ["rock", "paper", "scissors"];
+            const computerSelection = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
+            console.log(`Computer chose ${computerSelection}`);
+            //randomly chose 1
+
         if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
