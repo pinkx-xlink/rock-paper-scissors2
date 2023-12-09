@@ -20,7 +20,7 @@
     }
     const array = ["rock", "paper", "scissors"];
     const computerChoice = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
-    console.log(computerChoice);
+    console.log(`Computer chose ${computerChoice}`);
      //randomly chose 1
 
     let playerScore = 0;
@@ -32,7 +32,7 @@
     }
     function lose(computerScore) {
         ++computerScore;
-        console.log("you lose lol")
+        console.log("you lose lol");
     }
 
     function playRound(playerSelection, computerChoice) {
