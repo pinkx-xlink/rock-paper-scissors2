@@ -25,6 +25,13 @@
     let playerScore = win();
     let computerScore = win();
 
+    function win() {
+        ++playerScore;
+    }
+    function lose() {
+        ++computerScore;
+    }
+
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
             function win(playerScore){
