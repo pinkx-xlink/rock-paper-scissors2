@@ -28,9 +28,11 @@
 
     function win(playerScore) {
         ++playerScore;
+        console.log("You win!");
     }
     function lose(computerScore) {
         ++computerScore;
+        console.log("you lose lol")
     }
 
     function playRound(playerSelection, computerChoice) {
@@ -41,14 +43,11 @@
         } else if (playerSelection == "paper" && computerSelection == "rock") {
             return win();
         } else if (playerSelection == "rock" && computerSelection == "paper") {
-            lose();
-            return("you LOSE!")
+            return lose();
         } else if (playerSelection == "paper" && computerSelection == "scissors") {
-            lose();
-            return("you LOSE!")
+            return lose();
         } else if (playerSelection == "scissors" && computerSelection == "rock") {
-            lose();
-            return("you LOSE!")};
+            return lose();}
         //use return, not console.log
     }
 
