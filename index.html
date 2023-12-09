@@ -15,8 +15,7 @@
     document.getElementById("play").addEventListener("click", playRound);
 
     
-    let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
-    console.log(`You chose ${playerSelection}!`);
+    
 
     function getComputerChoice(array) {
         return array[Math.floor(Math.random() * array.length)];
@@ -39,7 +38,9 @@
     }
 
 
-    function playRound(playerSelection, computerChoice) {
+    function playRound() {
+        let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
+            console.log(`You chose ${playerSelection}!`);
         if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
