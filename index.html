@@ -43,13 +43,13 @@
             win();
             return("you win!")
         } else if (playerSelection == "rock" && computerSelection == "paper") {
-            ++computerScore;
+            lose();
             return("you LOSE!")
         } else if (playerSelection == "paper" && computerSelection == "scissors") {
-            ++computerScore;
+            lose();
             return("you LOSE!")
         } else if (playerSelection == "scissors" && computerSelection == "rock") {
-            ++computerScore;
+            lose();
             return("you LOSE!")};
         //use return, not console.log
     }
