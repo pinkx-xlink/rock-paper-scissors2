@@ -27,16 +27,22 @@
 
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
+            ++playerScore;
             return("you win!")
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
+            ++playerScore;
             return("you win!")
         } else if (playerSelection == "paper" && computerSelection == "rock") {
+            ++playerScore;
             return("you win!")
         } else if (playerSelection == "rock" && computerSelection == "paper") {
+            ++computerScore;
             return("you LOSE!")
         } else if (playerSelection == "paper" && computerSelection == "scissors") {
+            ++computerScore;
             return("you LOSE!")
         } else if (playerSelection == "scissors" && computerSelection == "rock") {
+            ++computerScore;
             return("you LOSE!")};
         //use return, not console.log
     }
