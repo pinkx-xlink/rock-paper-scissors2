@@ -12,48 +12,52 @@
 </body>
 
 <script>
-    let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
-    console.log(`You chose ${playerSelection}!`);
+    document.getElementById("play").addEventListener("click", game());
 
-    function getComputerChoice(array) {
-        return array[Math.floor(Math.random() * array.length)];
+    function game() {
+        let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
+        console.log(`You chose ${playerSelection}!`);
+
+        function getComputerChoice(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+        const array = ["rock", "paper", "scissors"];
+        const computerChoice = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
+        console.log(`Computer chose ${computerChoice}`);
+        //randomly chose 1
+
+        let playerScore = 0;
+        let computerScore = 0;
+
+        function win(playerScore) {
+            ++playerScore;
+            console.log("You win!");
+        }
+        function lose(computerScore) {
+            ++computerScore;
+            console.log("you lose lol");
+        }
+
+
+        function playRound(playerSelection, computerChoice) {
+            if (playerSelection == "rock" && computerSelection == "scissors") {
+                return win();
+            } else if (playerSelection == "scissors" && computerSelection == "paper") {
+                return win();
+            } else if (playerSelection == "paper" && computerSelection == "rock") {
+                return win();
+            } else if (playerSelection == "rock" && computerSelection == "paper") {
+                return lose();
+            } else if (playerSelection == "paper" && computerSelection == "scissors") {
+                return lose();
+            } else if (playerSelection == "scissors" && computerSelection == "rock") {
+                return lose();
+            }
+            //use return, not console.log
+        }
     }
-    const array = ["rock", "paper", "scissors"];
-    const computerChoice = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
-    console.log(`Computer chose ${computerChoice}`);
-     //randomly chose 1
-
-    let playerScore = 0;
-    let computerScore = 0;
-
-    function win(playerScore) {
-        ++playerScore;
-        console.log("You win!");
-    }
-    function lose(computerScore) {
-        ++computerScore;
-        console.log("you lose lol");
-    }
-
-
-    function playRound(playerSelection, computerChoice) {
-        if (playerSelection == "rock" && computerSelection == "scissors") {
-            return win();
-        } else if (playerSelection == "scissors" && computerSelection == "paper") {
-            return win();
-        } else if (playerSelection == "paper" && computerSelection == "rock") {
-            return win();
-        } else if (playerSelection == "rock" && computerSelection == "paper") {
-            return lose();
-        } else if (playerSelection == "paper" && computerSelection == "scissors") {
-            return lose();
-        } else if (playerSelection == "scissors" && computerSelection == "rock") {
-            return lose();}
-        //use return, not console.log
-    }
-
-    document.getElementById("play").addEventListener("click", playRound);
-    //game()
+    
+    game()
         //loop playRound x5
         //best out of 5 rounds is winner
         //console.log each round
