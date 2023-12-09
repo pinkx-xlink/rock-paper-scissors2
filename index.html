@@ -13,7 +13,6 @@
 
 <script>
     document.getElementById("play").addEventListener("click", playRound);
-
     
     let playerScore = 0;
     let computerScore = 0;
@@ -67,6 +66,8 @@
         } else if(playerScore >= 3) {
             console.log("Player WINS!")
         }
+        console.log(`Player's score: ${playerScore}`);
+        console.log(`Computer's score: ${computerScore}`);
     }
     game();
 
