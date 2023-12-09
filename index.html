@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>✂️ Rock, Paper, SCISSORS! ✂️</h1>
-    <button id="play", onclick="playRound()">Play Game?</button>
+    <button id="play", onclick="game()">Play Game?</button>
     
 </body>
 
@@ -60,6 +60,11 @@
         playRound();
         playRound();
         console.log("Game Over!");
+        if (computerScore >= 3) {
+            console.log("Computer WINS!")
+        } else if(playerScore >= 3) {
+            console.log("Player WINS!")
+        }
     }
     game();
 
