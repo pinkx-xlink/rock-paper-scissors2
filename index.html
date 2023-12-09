@@ -22,8 +22,8 @@
     console.log(computerChoice);
      //randomly chose 1
 
-    let playerScore = win();
-    let computerScore = win();
+    let playerScore = ;
+    let computerScore = ;
 
     function win() {
         ++playerScore;
@@ -34,16 +34,13 @@
 
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
-            function win(playerScore){
-                ++playerScore;
-            }
-            
+            win();
             return("you win!")
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
-            ++playerScore;
+            win();
             return("you win!")
         } else if (playerSelection == "paper" && computerSelection == "rock") {
-            ++playerScore;
+            win();
             return("you win!")
         } else if (playerSelection == "rock" && computerSelection == "paper") {
             ++computerScore;
