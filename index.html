@@ -35,6 +35,7 @@
         console.log("you lose lol");
     }
 
+
     function playRound(playerSelection, computerChoice) {
         if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
@@ -51,6 +52,7 @@
         //use return, not console.log
     }
 
+    document.getElementById("play").addEventListener("click", playRound);
     //game()
         //loop playRound x5
         //best out of 5 rounds is winner
