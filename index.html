@@ -17,9 +17,11 @@
 <script>
     document.getElementById("play").addEventListener("click", playRound);
     
-    
+    function getPlayerSelection() {
+        
+    }
 
-    const rock = document.getElementById("#rock");
+    const rock = document.getElementById("#rock").addEventListener("click", getPlayerSelection);
 
     const paper = document.getElementById("#paper"); 
 
