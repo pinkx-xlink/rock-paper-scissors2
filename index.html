@@ -19,18 +19,27 @@
     document.getElementById("play").addEventListener("click", playRound);
     
     function getPlayerSelection() {
-        const playerOptions = ["rock", "paper", "scissors"];
-        const rock = document.getElementById("#rock").addEventListener("click", getPlayerSelection);
-
-        const paper = document.getElementById("#paper"); 
-
-        const scissors = document.getElementById("#scissors");
-        playerSelection = this.playerOptions.value;
-        console.log(`you chose ${playerSelection}`);
+    
+        //playerSelection = this.playerOptions.value;
     }
 
-   
+    const options = document.querySelector("#options");
+    options.textContent = "options";
+    
+    const rock = document.createElement('button');
+    rock.classList.add('button');
+    rock.textContent = "rock";
+    options.appendChild(rock);
 
+    const paper = document.createElement('button');
+    paper.classList.add('button');
+    paper.textContent = "paper";
+    options.appendChild(paper);
+
+    const scissors = document.createElement('button');
+    scissors.classList.add('button');
+    scissors.textContent = "scissors";
+    options.appendChild(scissors);
 
     let playerScore = 0;
     let computerScore = 0;
