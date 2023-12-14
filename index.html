@@ -19,7 +19,20 @@
     document.getElementById("play").addEventListener("click", playRound);
     
     function getPlayerSelection() {
-    
+    options.addEventListener('click', (event) => 
+        let target = event.target;
+        switch(target.id) {
+            case 'rock': 
+                console.log('Player chose rock!');
+                break;
+            case 'paper': 
+                console.log("Player chose paper!");
+                break;
+            case 'scissors': 
+                console.log("Player chose scissors!");
+                break
+        }
+        );
         //playerSelection = this.playerOptions.value;
     }
 
