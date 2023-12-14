@@ -18,7 +18,7 @@
 <script>
     document.getElementById("play").addEventListener("click", playRound);
     
-    let playerSelection = getPlayerSelection();
+    
 
     const options = document.querySelector("#options");
     options.textContent = "options";
@@ -43,15 +43,15 @@
             let target = event.target;
             switch(target.id) {
                 case 'rock': 
-                    this.playerSelection.value = rock;
+                    playerSelection = rock;
                     console.log('Player chose rock!');
                     break;
                 case 'paper': 
-                    this.playerSelection.value = paper;
+                    playerSelection = paper;
                     console.log("Player chose paper!");
                     break;
                 case 'scissors':
-                    this.playerSelection.value = scissors; 
+                    playerSelection = scissors; 
                     console.log("Player chose scissors!");
                     break;
             }
@@ -59,7 +59,7 @@
         )};
         //playerSelection = this.playerOptions.value;
 
-    
+        let playerSelection = getPlayerSelection();
 
     let playerScore = 0;
     let computerScore = 0;
