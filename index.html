@@ -18,23 +18,28 @@
 <script>
     document.getElementById("play").addEventListener("click", playRound);
     
+    let playerSelection;
+
     function getPlayerSelection() {
-    options.addEventListener('click', (event) => 
-        let target = event.target;
-        switch(target.id) {
-            case 'rock': 
-                console.log('Player chose rock!');
-                break;
-            case 'paper': 
-                console.log("Player chose paper!");
-                break;
-            case 'scissors': 
-                console.log("Player chose scissors!");
-                break
-        }
-        );
+        options.addEventListener('click', (event) => {
+            let target = event.target;
+            switch(target.id) {
+                case 'rock': 
+                    this.playerSelection = rock;
+                    console.log('Player chose rock!');
+                    break;
+                case 'paper': 
+                    this.playerSelection = paper;
+                    console.log("Player chose paper!");
+                    break;
+                case 'scissors':
+                    this.playerSelection = scissors; 
+                    console.log("Player chose scissors!");
+                    break;
+            }
+            }
+        )};
         //playerSelection = this.playerOptions.value;
-    }
 
     const options = document.querySelector("#options");
     options.textContent = "options";
@@ -56,8 +61,6 @@
 
     let playerScore = 0;
     let computerScore = 0;
-
-    let playerSelection;
     
     function win() {
         return ++playerScore;
