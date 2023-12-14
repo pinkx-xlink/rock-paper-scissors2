@@ -17,6 +17,8 @@
 <script>
     document.getElementById("play").addEventListener("click", playRound);
     
+    
+
     const rock = document.getElementById('#rock');
 
     const paper = document.getElementById('#paper'); 
@@ -27,6 +29,10 @@
     let playerScore = 0;
     let computerScore = 0;
 
+    let playerSelection = function getPlayerSelection() {
+
+    };
+    
     function win() {
         return ++playerScore;
         console.log("You win!");
@@ -38,8 +44,7 @@
 
     function playRound() {
        // let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
-       let playerSelection = [rock, paper, scissors]; //try making playerSelect a const with the btn consts inside it?
-
+       
             console.log(`You chose ${playerSelection}!`);
 
         function getComputerChoice(array) {
