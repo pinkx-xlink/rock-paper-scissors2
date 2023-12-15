@@ -26,6 +26,7 @@
     rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
     rock.textContent = "rock";
+    rock.setAttribute('name', 'rock');
     options.appendChild(rock);
 
     const paper = document.createElement('button');
@@ -52,7 +53,6 @@
         playerChose.textContent = `Player chose: ${this.id}`;
         options.appendChild(playerChose);
         let playerSelection = this.id;
-        
     }
 
 
@@ -93,7 +93,7 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
 
-        if (playerSelection == "rock" && computerSelection == "scissors") {
+        if (getPlayerSelection == "rock" && computerSelection == "scissors") {
             return win();
         } else if (playerSelection == "scissors" && computerSelection == "paper") {
             return win();
