@@ -93,8 +93,9 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
 
-        if (playerSelection == rock && computerSelection == "scissors") {
+        if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
+            console.log("WINNER!");
         } else if (playerSelection === scissors && computerSelection == "paper") {
             return win();
         } else if (playerSelection === paper && computerSelection == "rock") {
