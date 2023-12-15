@@ -21,6 +21,7 @@
     options.textContent = "options";
     
     const rock = document.createElement('button');
+    
     rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
     rock.textContent = "rock";
@@ -41,7 +42,8 @@
     let playerSelection;
     
     function getPlayerSelection() {
-        console.log("you chose something idk")
+        console.log(`${this.playerSelection}`)
+        playerSelection = getPlayerSelection;
     }
 
     let playerScore = 0;
