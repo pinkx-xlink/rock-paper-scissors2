@@ -21,19 +21,21 @@
     options.textContent = "options";
     
     const rock = document.createElement('button');
-    
+    rock.setAttribute('id', 'rock');
     rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
     rock.textContent = "rock";
     options.appendChild(rock);
 
     const paper = document.createElement('button');
+    paper.setAttribute('id', 'paper');
     paper.addEventListener("click", getPlayerSelection);
     paper.classList.add('button');
     paper.textContent = "paper";
     options.appendChild(paper);
 
     const scissors = document.createElement('button');
+    scissors.setAttribute('id', 'scissors');
     scissors.addEventListener("click", getPlayerSelection);
     scissors.classList.add('button');
     scissors.textContent = "scissors";
