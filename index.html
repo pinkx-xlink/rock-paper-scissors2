@@ -46,6 +46,10 @@
     function getPlayerSelection() {
         console.log(`Player chose ${this.id}`)
         playerSelection = getPlayerSelection;
+        const playerChose = document.createElement('p');
+        playerChose.classList.add('p');
+        playerChose.textContent = `Player chose: ${this.id}`;
+        options.appendChild(playerChose);
     }
 
     let playerScore = 0;
