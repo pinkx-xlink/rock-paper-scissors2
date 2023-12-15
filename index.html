@@ -78,9 +78,6 @@
     }
 
     function playRound() {
-       // let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
-        //console.log(`You chose ${playerSelection}!`);
-
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
@@ -95,7 +92,6 @@
 
         if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
-            console.log("WINNER!");
         } else if (playerSelection === scissors && computerSelection == "paper") {
             return win();
         } else if (playerSelection === paper && computerSelection == "rock") {
@@ -107,7 +103,6 @@
         } else if (playerSelection === scissors && computerSelection == "rock") {
             return lose();
         }  
-        //might have to breal up playRound into mult funct that can be accessed easier?
         //use return, not console.log
     }
 
