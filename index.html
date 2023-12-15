@@ -39,14 +39,20 @@
 
         //playerSelection = this.playerOptions.value;
 
-    let playerSelection = () => {
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(button => {
-            button.addEventListener("click", (event) => {
-                console.log(event.target.innerText);
-            });
-        });
-    };
+    let playerSelection;
+    let button = document.querySelectorAll('button');
+
+    button.onclick = function(event) {
+        let target = event.target;
+        getPlayerSelection(target);
+    }
+    function getPlayerSelection(button) {
+        if (playerSelection) {
+            playerSelection.classList.remove('getPlayerSelection');
+        }
+        playerSelection = button;
+        playerSelection.classList.add('getPlayerSelection');
+    }
 
     let playerScore = 0;
     let computerScore = 0;
