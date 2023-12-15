@@ -45,11 +45,12 @@
     
     function getPlayerSelection() {
         console.log(`Player chose ${this.id}`)
-        playerSelection = getPlayerSelection;
+        // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
         const playerChose = document.createElement('p');
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.id}`;
         options.appendChild(playerChose);
+        playerSelection = this.id;
     }
 
     let playerScore = 0;
@@ -66,15 +67,14 @@
 
     function playRound() {
        // let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
-            console.log(`You chose ${playerSelection}!`);
-
+        //console.log(`You chose ${playerSelection}!`);
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
             const array = ["rock", "paper", "scissors"];
-            const computerSelection = getComputerChoice(array); //array[Math.floor(Math.random() * array.length)];
+            const computerSelection = getComputerChoice(array);
             console.log(`Computer chose ${computerSelection}`);
-            //randomly chose 1
+            //randomly choose 1
 
         if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
