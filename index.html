@@ -77,8 +77,7 @@
         options.appendChild(youLost);
     }
 
-    function playRound() {
-        function getComputerChoice(array) {
+    function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
             const array = ["rock", "paper", "scissors"];
@@ -88,6 +87,12 @@
             computerChose.textContent = `Computer chose: ${computerSelection}`;
             options.appendChild(computerChose);
             console.log(`Computer chose ${computerSelection}`);
+        
+
+
+
+    function playRound() {
+        
             //randomly choose 1
 
         if (playerSelection == "rock" && computerSelection == "scissors") {
