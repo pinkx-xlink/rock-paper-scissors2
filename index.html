@@ -61,6 +61,10 @@
     function win() {
         return ++playerScore;
         console.log("You win!");
+        const youWin = document.createElement('p');
+        youWin.classList.add('p');
+        youWin.textContent = "YOU WON! :D"
+        options.appendChild(youWin);
     }
     function lose() {
         return ++computerScore;
