@@ -40,15 +40,12 @@
         //playerSelection = this.playerOptions.value;
 
     let playerSelection = () => {
-        options.addEventListener("click", (event) => {
-            if (event.target.id === 'rock') {
-                console.log("Player chose rock!");
-            } else if (event.target.id === 'paper') {
-                console.log("Player chose paper!");
-            } else if (event.target.id === 'scissors') {
-                console.log("Player chose scissors!");
-            }
-        })
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener("click", (event) => {
+                console.log(event.target.innerText);
+            });
+        });
     };
 
     let playerScore = 0;
