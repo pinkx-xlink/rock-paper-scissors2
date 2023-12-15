@@ -18,6 +18,7 @@
     //document.getElementById("play").addEventListener("click", playRound);
     
     const options = document.querySelector("#options");
+
     options.textContent = "options";
     options.addEventListener("click", playRound);
     
@@ -80,7 +81,6 @@
        // let playerSelection = prompt("ROCK, PAPER, or SCISSORS?");
         //console.log(`You chose ${playerSelection}!`);
 
-
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
@@ -93,17 +93,17 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
 
-        if (getPlayerSelection == "rock" && computerSelection == "scissors") {
+        if (playerSelection == rock && computerSelection == "scissors") {
             return win();
-        } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        } else if (playerSelection === scissors && computerSelection == "paper") {
             return win();
-        } else if (playerSelection == "paper" && computerSelection == "rock") {
+        } else if (playerSelection === paper && computerSelection == "rock") {
             return win();
-        } else if (playerSelection == "rock" && computerSelection == "paper") {
+        } else if (playerSelection === rock && computerSelection == "paper") {
             return lose();
-        } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        } else if (playerSelection === paper && computerSelection == "scissors") {
             return lose();
-        } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        } else if (playerSelection === scissors && computerSelection == "rock") {
             return lose();
         }
         //use return, not console.log
