@@ -27,11 +27,13 @@
     options.appendChild(rock);
 
     const paper = document.createElement('button');
+    paper.addEventListener("click", getPlayerSelection);
     paper.classList.add('button');
     paper.textContent = "paper";
     options.appendChild(paper);
 
     const scissors = document.createElement('button');
+    scissors.addEventListener("click", getPlayerSelection);
     scissors.classList.add('button');
     scissors.textContent = "scissors";
     options.appendChild(scissors);
@@ -40,6 +42,7 @@
     function getPlayerSelection() {
         console.log("you chose something idk")
     }
+    playerSelection = getPlayerSelection();
 
     let playerScore = 0;
     let computerScore = 0;
