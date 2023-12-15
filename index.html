@@ -69,6 +69,10 @@
     function lose() {
         return ++computerScore;
         console.log("you lose lol");
+        const youLost = document.createElement('p');
+        youLost.classList.add('p');
+        youLost.textContent = "YOU LOST! D:"
+        options.appendChild(youLost);
     }
 
     function playRound() {
