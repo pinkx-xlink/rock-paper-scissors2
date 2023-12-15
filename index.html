@@ -19,6 +19,7 @@
     
     const options = document.querySelector("#options");
     options.textContent = "options";
+    options.addEventListener("click", playRound);
     
     const rock = document.createElement('button');
     rock.setAttribute('id', 'rock');
@@ -52,6 +53,7 @@
         options.appendChild(playerChose);
         playerSelection = this.id;
     }
+
 
     let playerScore = 0;
     let computerScore = 0;
