@@ -87,30 +87,32 @@
             computerChose.textContent = `Computer chose: ${computerSelection}`;
             options.appendChild(computerChose);
             console.log(`Computer chose ${computerSelection}`);
+            //randomly choose 1
+
+
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
 
 
 
     function playRound() {
-        
-            //randomly choose 1
-
-        if (playerSelection == "rock" && computerSelection == "scissors") {
-            return win();
-        } else if (playerSelection === scissors && computerSelection == "paper") {
-            return win();
-        } else if (playerSelection === paper && computerSelection == "rock") {
-            return win();
-        } else if (playerSelection === rock && computerSelection == "paper") {
-            return lose();
-        } else if (playerSelection === paper && computerSelection == "scissors") {
-            return lose();
-        } else if (playerSelection === scissors && computerSelection == "rock") {
-            return lose();
-        }  
-        //use return, not console.log
+        // if (playerSelection == "rock" && computerSelection == "scissors") {
+        //     return win();
+        // } else if (playerSelection === scissors && computerSelection == "paper") {
+        //     return win();
+        // } else if (playerSelection === paper && computerSelection == "rock") {
+        //     return win();
+        // } else if (playerSelection === rock && computerSelection == "paper") {
+        //     return lose();
+        // } else if (playerSelection === paper && computerSelection == "scissors") {
+        //     return lose();
+        // } else if (playerSelection === scissors && computerSelection == "rock") {
+        //     return lose();
+        // }  
+        // //use return, not console.log
     }
+
+    
 
     // function game() {
     //     playRound();
