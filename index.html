@@ -21,6 +21,7 @@
     options.textContent = "options";
     
     const rock = document.createElement('button');
+    rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
     rock.textContent = "rock";
     options.appendChild(rock);
@@ -36,6 +37,9 @@
     options.appendChild(scissors);
 
     let playerSelection;
+    function getPlayerSelection() {
+        console.log("you chose something idk")
+    }
 
     let playerScore = 0;
     let computerScore = 0;
