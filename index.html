@@ -49,9 +49,7 @@
     scissors.textContent = "scissors";
     options.appendChild(scissors);
 
-    let playerSelection;
-    
-    function getPlayerSelection() {
+    let playerSelection = function getPlayerSelection() {
         console.log(`Player chose ${this.id}`);
         // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
         const playerChose = document.createElement('p');
@@ -60,7 +58,9 @@
         scores.appendChild(playerChose);
         //let playerSelection = this.id;
        // playerChose.appendChild(this.id); //was playerSelection.appendChild//this line causes error bc "appendchild not node type"
-    }
+    };
+    
+    
     //let playerChose = getPlayerSelection;
     //playerSelection.appendChild(playerChose);
     
