@@ -58,11 +58,7 @@
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.id}`;
         scores.appendChild(playerChose);
-        //let playerSelection = this.id;
-       // playerChose.appendChild(this.id); //was playerSelection.appendChild//this line causes error bc "appendchild not node type"
     }
-    //let playerChose = getPlayerSelection;
-    //playerSelection.appendChild(playerChose);
     
     function win() {
         return ++playerScore;
@@ -97,7 +93,7 @@
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
         
-        if (playerSelection == "rock" && computerSelection == "scissors") {
+        if (playerSelection == "#rock" && computerSelection == "scissors") {
             return win();
         } else if (playerSelection === scissors && computerSelection == "paper") {
             return win();
@@ -113,6 +109,8 @@
 
         //use return, not console.log
     }
+
+
 
     
 
