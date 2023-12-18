@@ -21,6 +21,9 @@
     const options = document.querySelector("#options");
     const scores = document.querySelector("#scores");
 
+    let playerScore = 0;
+    let computerScore = 0;
+
     options.textContent = "options";
     options.addEventListener("click", playRound);
     
@@ -56,12 +59,8 @@
         playerChose.textContent = `Player chose: ${this.id}`;
         scores.appendChild(playerChose);
         //let playerSelection = this.id;
-        playerSelection.appendChild(this.id);
+        playerChose.appendChild(this.id);
     }
-
-
-    let playerScore = 0;
-    let computerScore = 0;
     
     function win() {
         return ++playerScore;
@@ -79,10 +78,6 @@
         youLost.textContent = "YOU LOST! D:"
         scores.appendChild(youLost);
     }
-
-   
-
-
 
     function playRound() {
 
@@ -115,6 +110,7 @@
         } else if (playerSelection === scissors && computerSelection == "rock") {
             return lose();
         }  
+
         //use return, not console.log
     }
 
