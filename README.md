@@ -5,3 +5,5 @@ Rock paper scissors second runthrough
 I formed a better understanding of creating elements with JavaScript and assigning to them attributes, variables, and functions. I exercised my knowledge of loops, arrays, and variable incrimentors and decrementers.
 
 12/14/23: 4 hrs - After creating a new experimental branch (per the instructions from second part of the Rock, Paper, Scissors lesson of The Odin Project), I appended new HTML elements using JavaScript; redefined playerSelection and created new functions and variables to display player input and computer's randomized selection in the console as well as on the document. I formed a better understanding of setting and applying id's using JavaScript. 
+
+12/18/23; after moving getPlayerSelection into playRound(), playerSelection shows as valid in the if/else statement, but console only returns/log computer's choice. :p
