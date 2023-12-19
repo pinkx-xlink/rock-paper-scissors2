@@ -143,16 +143,13 @@
             const winner = document.querySelector("#winner");
             function displayWinner() {
                 if (win()) {
-                    const winningText = document.createElement('p');
-                    winningText.classList.add('p');
-                    winningText.textContent = `You win!`;
-                    winner.appendChild(winningText);
-                    return winningText;
+                    winner.innerHTML = `<p> You Win! </p>`;
                 } else if (lose()) {
-                    const losingText = document.createElement('p');
-                    losingText.classList.add('p');
-                    losingText.textContent = `You LOST!`;
-                    winner.appendChild(losingText);
+                    // const losingText = document.createElement('p');
+                    // losingText.classList.add('p');
+                    // losingText.textContent = `You LOST!`;
+                    // winner.appendChild(losingText);
+                    winner.innerHTML = `<p>You LOST! ):</p>`;
                 };
             };
         };
