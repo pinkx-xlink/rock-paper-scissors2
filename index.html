@@ -68,6 +68,15 @@
 
     function playRound() {
 
+        const playerSelection = () => {
+            console.log(`Player chose ${this.id}`);
+                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
+            const playerChose = document.createElement('p');
+            playerChose.classList.add('p');
+            playerChose.textContent = `Player chose: ${this.id}`;
+            return playerSelection;
+        }
+
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
@@ -81,14 +90,7 @@
             //randomly choose 1
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
-        const playerSelection = () => {
-            console.log(`Player chose ${this.id}`);
-                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
-            const playerChose = document.createElement('p');
-            playerChose.classList.add('p');
-            playerChose.textContent = `Player chose: ${this.id}`;
-            return playerSelection;
-        }
+      
         
 
         if (playerSelection === rock && computerSelection == "scissors") {
