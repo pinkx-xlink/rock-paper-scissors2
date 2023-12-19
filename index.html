@@ -74,6 +74,8 @@
             const playerChose = document.createElement('p');
             playerChose.classList.add('p');
             playerChose.textContent = `Player chose: ${this.id}`;
+            scores.appendChild(playerChose);
+            playerChose.textContent = `Player chose: ${this.id}`;
             return playerSelection;
         }
 
