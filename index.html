@@ -59,6 +59,17 @@
     scissors.classList.add('button');
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
+
+    function getComputerChoice(array) {
+            return array[Math.floor(Math.random() * array.length)];
+            }
+            const array = ["rock", "paper", "scissors"];
+            const computerSelection = getComputerChoice(array);
+            const computerChose = document.createElement('p');
+            computerChose.classList.add('p');
+            computerChose.textContent = `Computer chose: ${computerSelection}`;
+            scores.appendChild(computerChose);
+            console.log(`Computer chose ${computerSelection}`);
     
     let playerSelection = getPlayerSelection;
     function getPlayerSelection() {
@@ -71,17 +82,17 @@
         playerSelection = playerChose;
         return playerSelection;
 
-        if (playerSelection == "rock" && computerSelection == "scissors") {
+        if (playerSelection == "#rock" && computerSelection == "scissors") {
             return win();
-        } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        } else if (playerSelection === "#scissors" && computerSelection == "paper") {
             return win();
-        } else if (playerSelection == "paper" && computerSelection == "rock") {
+        } else if (playerSelection === "#paper" && computerSelection == "rock") {
             return win();
-        } else if (playerSelection == "rock" && computerSelection == "paper") {
+        } else if (playerSelection === "#rock" && computerSelection == "paper") {
             return lose();
-        } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        } else if (playerSelection === "#paper" && computerSelection == "scissors") {
             return lose();
-        } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        } else if (playerSelection === "#scissors" && computerSelection == "rock") {
             return lose();
         }  
         
@@ -108,16 +119,7 @@
     function playRound() {
 
     
-        function getComputerChoice(array) {
-            return array[Math.floor(Math.random() * array.length)];
-            }
-            const array = ["rock", "paper", "scissors"];
-            const computerSelection = getComputerChoice(array);
-            const computerChose = document.createElement('p');
-            computerChose.classList.add('p');
-            computerChose.textContent = `Computer chose: ${computerSelection}`;
-            scores.appendChild(computerChose);
-            console.log(`Computer chose ${computerSelection}`);
+        
             //randomly choose 1
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
