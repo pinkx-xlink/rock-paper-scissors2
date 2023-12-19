@@ -43,7 +43,7 @@
     displayComputerScore.textContent = `Computer's score: ${computerScore}`;
     scoreBoard.appendChild(displayComputerScore);
     function win() {
-        return ++playerScore;
+        ++playerScore;
         console.log("You win!");
         const youWin = document.createElement('p');
         youWin.classList.add('p');
@@ -51,7 +51,7 @@
         scoreBoard.appendChild(youWin);
     }
     function lose() {
-        return ++computerScore;
+        ++computerScore;
         console.log("you lose lol");
         const youLost = document.createElement('p');
         youLost.classList.add('p');
