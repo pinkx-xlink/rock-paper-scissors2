@@ -49,7 +49,9 @@
         youWin.classList.add('p');
         youWin.textContent = "YOU WON! :D"
         scoreBoard.appendChild(youWin);
-        return (++playerScore);
+        let newPlayerScore = (++playerScore);
+        console.log(newPlayerScore);
+        displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
     }
     function lose() {
         ++computerScore;
