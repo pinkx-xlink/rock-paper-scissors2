@@ -13,6 +13,7 @@
     
     <div id="options"></div>
     <div id="turn">Turn: </div>
+    <div id="scoreBoard">SCOREBOARD</div>
  
 </body>
 
@@ -24,11 +25,11 @@
     const turn = document.querySelector("#turn");
 
 
-    const scoreBoard = document.createElement('div');
-    scoreBoard.classList.add('div');
-    scoreBoard.setAttribute('id', 'scoreBoard');
-    scoreBoard.textContent = "SCOREBOAR";
-    scores.appendChild(scoreBoard);
+    const scoreBoard = document.querySelector("#scoreBoard");
+    // scoreBoard.classList.add('div');
+    // scoreBoard.setAttribute('id', 'scoreBoard');
+    // scoreBoard.textContent = "SCOREBOAR";
+    // scores.appendChild(scoreBoard);
 
     let playerScore = 0;
     displayPlayerScore = document.createElement('p');
@@ -47,7 +48,7 @@
         const youWin = document.createElement('p');
         youWin.classList.add('p');
         youWin.textContent = "YOU WON! :D"
-        scores.appendChild(youWin);
+        turn.appendChild(youWin);
     }
     function lose() {
         return ++computerScore;
@@ -55,7 +56,7 @@
         const youLost = document.createElement('p');
         youLost.classList.add('p');
         youLost.textContent = "YOU LOST! D:"
-        scores.appendChild(youLost);
+        turn.appendChild(youLost);
     }
 
    
@@ -90,7 +91,7 @@
         const playerChose = document.createElement('p');
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.name}`;
-        scores.appendChild(playerChose);
+        turn.appendChild(playerChose);
         playerSelection = this.name;
         return playerSelection;
     }
@@ -106,7 +107,7 @@
             const computerChose = document.createElement('p');
             computerChose.classList.add('p');
             computerChose.textContent = `Computer chose: ${computerSelection}`;
-            scores.appendChild(computerChose);
+            turn.appendChild(computerChose);
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
         //use return, not console.log
