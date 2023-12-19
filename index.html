@@ -62,9 +62,10 @@
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
+    rock.setAttribute('id', 'rock');
     rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
-    rock.textContent = "rock";
+    rock.innerHTML = `<image src="/img/rock.png" height="55px"/>`;
     rock.setAttribute('name', 'rock');
     options.appendChild(rock);
 

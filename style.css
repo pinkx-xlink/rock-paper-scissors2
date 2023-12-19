@@ -19,7 +19,9 @@ h1 {
     border: 3px solid white;
     border-radius: 4px;
 }
-
+#rock {
+    background-image: url(img/rock.png);
+}
 button {
     min-height: 50px;
     height: 80px;
@@ -28,8 +30,9 @@ button {
     background-image: linear-gradient(to bottom left, rgba(128, 0, 128, 0.452), rgba(9, 59, 196, 0.5));
     border-radius: 5px;
     border: 2px solid white;
-    
 }
+
+
 
 #scoreBoard {
     background-color: rgba(128, 0, 128, 0.219);
