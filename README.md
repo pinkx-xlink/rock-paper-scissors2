@@ -10,7 +10,20 @@ I formed a better understanding of creating elements with JavaScript and assigni
 
 12/19/23: After 2 hours of debugging, deleting, copy + pasting, and refactoring, most of the bugs have been worked out; both the player and computer once again get a turn each for each round, the scores are displayed on the screen, the event listeners all do what they should. However, I'm at a loss for why my win() and lose() aren't working now. I tried assigning id's to the playerSelection options, moving functions into/away from each other, making minor and larger more risky syntax tweaks. 
 After another 2 hours of trial and error, I've finally gotten the console to accept & respond to function based on player + computer selections ... however, now it's gona from not running either win() or lose() function each round, to running both.
+After 6 hours of debugging, I've realized that the fix was to write:
 
+// if/else statement here...
+if ((playerSelection) == 'rock' && computerSelection == 'scissors') {
+    console.log("YOU WIN!");
+}
+INSTEAD OF THIS:
+// if/else statement here...
+if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    console.log("YOU WIN!");
+}
+
+How silly of me.
+...At least I can say I learned something today!
 
 
 paper img source: https://th.bing.com/th/id/R.6949ee86b3ab0fee993f170a72fd2d04?rik=JL95HtGeovF7Ww&riu=http%3a%2f%2fpixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com%2fimage%2f7346e1cdfa07a65.png&ehk=jkWnpPx9791BIDLVRunZMPQJ6Y7x1UlTxv8S3qtQ06E%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
