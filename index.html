@@ -109,7 +109,9 @@
             //use return, not console.log
             do {
                 console.log("YOU WON!");
-            } while (playerSelection == `rock` && computerSelection == "scissors");
+            } while (playerSelection == `rock` && computerSelection == "scissors",
+                    playerSelection == `paper` && computerSelection == "rock",
+                    playerSelection == `scissors` && computerSelection == "paper");
     }
 
     
