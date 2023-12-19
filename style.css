@@ -30,7 +30,9 @@ button {
     border: 2px solid white;
 }
 
-
+#scores {
+    color: aliceblue;
+}
 
 #scoreBoard {
     background-color: rgba(128, 0, 128, 0.219);
