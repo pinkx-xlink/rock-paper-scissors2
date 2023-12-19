@@ -23,7 +23,6 @@
     const options = document.querySelector("#options");
     options.addEventListener("click", playRound);
     
-
     const scoreBoard = document.querySelector("#scoreBoard");
 
     let playerScore = 0;
@@ -38,7 +37,6 @@
     displayComputerScore.textContent = `Computer's score: ${computerScore}`;
     scoreBoard.appendChild(displayComputerScore);
     
-
     let winner = document.querySelector("#winner");
     winner.textContent = "And the winner is..."
     winner.innerHTML = `<p>And the winner is.....</p>`;
@@ -49,7 +47,6 @@
         console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
         winner.innerHTML = `<p> You Win! </p>`;
-        
     }
 
     function lose() {
@@ -60,7 +57,17 @@
         winner.innerHTML = `<p>You LOST! ):</p>`;
     }
 
-
+    function getWinner() {
+        if (computerScore > playerScore) {
+                scoreBoard.innerHTML = `
+                <p>Computer Won this Game!</p>
+                <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
+            } else if (playerScore > computerScore) {
+                scoreBoard.innerHTML = `
+                <p>Player Won this Game!</p>
+                <p> Player Score: ${playerScore} out of 5 rounds</p>`;
+            }
+        }
 
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
@@ -145,15 +152,7 @@
         playRound();
         playRound();
         playRound();
-        if (computerScore > playerScore) {
-            scoreBoard.innerHTML = `
-            <p>Computer Won this Game!</p>
-            <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
-        } else if (playerScore > computerScore) {
-            scoreBoard.innerHTML = `
-            <p>Player Won this Game!</p>
-            <p> Player Score: ${playerScore} out of 5 rounds</p>`;
-        }
+        getWinner();
     };
     game();
 </script>
