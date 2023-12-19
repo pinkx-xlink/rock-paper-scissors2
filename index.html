@@ -53,13 +53,16 @@
         console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
     }
+
     function lose() {
-        ++computerScore;
         console.log("you lose lol");
         const youLost = document.createElement('p');
         youLost.classList.add('p');
         youLost.textContent = "YOU LOST! D:"
         scoreBoard.appendChild(youLost);
+        let newComputerScore = ( ++computerScore);
+        console.log(newComputerScore);
+        displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
     }
     
     const rock = document.createElement('button');
