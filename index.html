@@ -121,16 +121,22 @@
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 return win();
+                displayWinner();
             } else if ((playerSelection) == "paper" && computerSelection == "rock") {
                 return win();
+                displayWinner();
             } else if ((playerSelection) == "scissors" && computerSelection == "paper") {
                 return win();
+                displayWinner();
             } else if ((playerSelection) == "scissors" && computerSelection == "rock") {
                 return lose();
+                displayWinner();
             } else if ((playerSelection) == "rock" && computerSelection == "paper") {
                 return lose();
+                displayWinner();
             } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
                 return lose();
+                displayWinner();
             } else { console.log("TIE!");
             };
 
@@ -141,6 +147,7 @@
                     winningText.classList.add('p');
                     winningText.textContent = `You win!`;
                     winner.appendChild(winningText);
+                    return winningText;
                 } else if (lose()) {
                     const losingText = document.createElement('p');
                     losingText.classList.add('p');
