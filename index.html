@@ -108,6 +108,22 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
+
+            switch (playerSelection) {
+                default: 
+                    text = "Who will win....."
+                    break;
+                case 1: 
+                case 2: 
+                case 3: 
+                    text = "You win!";
+                    break;
+                case 4: 
+                case 5: 
+                case 6:  
+                    text = "You lost ):";
+                    break;
+            }
         // function findWinner() {
         //     if (this.name == `rock` && computerSelection == "scissors") {
         //         win();
