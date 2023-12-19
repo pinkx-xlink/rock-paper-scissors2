@@ -47,11 +47,7 @@
     scissors.addEventListener("click", playRound);
     scissors.classList.add('button');
     scissors.textContent = "scissors";
-    options.appendChild(scissors);
-
-    //let playerSelection;
-    
-    
+    options.appendChild(scissors);  
     
     function win() {
         return ++playerScore;
@@ -85,18 +81,18 @@
             //randomly choose 1
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
-
+        let playerSelection = getPlayerSelection;
             function getPlayerSelection() {
             console.log(`Player chose ${this.id}`);
-            // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
+                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
             const playerChose = document.createElement('p');
             playerChose.classList.add('p');
             playerChose.textContent = `Player chose: ${this.id}`;
             scores.appendChild(playerChose);
-            }
-            let playerSelection = getPlayerSelection;
+        }
+           
 
-        if (playerSelection == "#rock" && computerSelection == "scissors") {
+        if (playerSelection == "rock" && computerSelection == "scissors") {
             return win();
         } else if (playerSelection === scissors && computerSelection == "paper") {
             return win();
