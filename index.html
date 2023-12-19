@@ -86,12 +86,14 @@
         scores.appendChild(playerChose);
         playerSelection = this.id;
         return playerSelection;
+
+      
     }
 
     
 
     function playRound() {
-
+        this.playerSelection;
     
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
@@ -107,9 +109,20 @@
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
       
+        if (playerSelection === "#rock" && computerSelection == "scissors") {
+            return win();
+        } else if (playerSelection === "#scissors" && computerSelection == "paper") {
+            return win();
+        } else if (playerSelection === "#paper" && computerSelection == "rock") {
+            return win();
+        } else if (playerSelection === "#rock" && computerSelection == "paper") {
+            return lose();
+        } else if (playerSelection === "#paper" && computerSelection == "scissors") {
+            return lose();
+        } else if (playerSelection === "#scissors" && computerSelection == "rock") {
+            return lose();
+        }  
         
-
-    
 
         //use return, not console.log
     }
