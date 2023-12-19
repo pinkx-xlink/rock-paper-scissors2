@@ -154,7 +154,9 @@
             } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
                 return lose();
                 displayWinner();
-            } else { console.log("TIE!");
+            } else { 
+                winner.innerHTML = `<p>it's a tie :p</p>`;
+                console.log("TIE!");
             };
 
             
