@@ -148,17 +148,21 @@
                 winner.innerHTML = `<p>it's a tie :p</p>`;
                 console.log("TIE!");
             }; 
-        };
+        }; 
         
-        let i = 0; 
-        const game = game() {
-            while(i < 3) {
-                playRound();
+        const loop = function () {
+            for (i = 0; i < 3; i++) {
+                getPlayerSelection();
                 i++;
                 console.log("play again");
+            } if (i === 3) {
+                console.log("GAME OVER");
+            } else {
+                console.log("testing lol");
             }
-        }
-        game();
+        };
+        loop();
+        
 
 </script>
 </html>
