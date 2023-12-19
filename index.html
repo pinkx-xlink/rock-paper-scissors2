@@ -109,12 +109,14 @@
             //use return, not console.log
             do {
                 console.log("YOU WON!");
+                break;
             } while (playerSelection == `rock` && computerSelection == "scissors",
                     playerSelection == `paper` && computerSelection == "rock",
                     playerSelection == `scissors` && computerSelection == "paper");
     
             do {
                 console.log("YOU LOOOOOOST ): !");
+                break;
             } while (playerSelection == `paper` && computerSelection == "scissors",
                     playerSelection == `scissors` && computerSelection == "rock",
                     playerSelection == `rock` && computerSelection == "paper");
