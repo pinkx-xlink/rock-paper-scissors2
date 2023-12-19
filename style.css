@@ -38,6 +38,18 @@ button {
     border-radius: 5px;
     border: 2px solid white;
 }
+button:hover {
+    background-image: linear-gradient(to bottom left, rgba(128, 0, 128, 0.692), rgba(9, 59, 196, 0.753));
+    box-shadow: white -5px 5px 15px;
+    animation: shaking 0.5s;}
+    @keyframes shaking {
+        0% {transform: rotate(0deg);}
+        20% {transform: rotate(-4deg);}
+        50% {transform: rotate(0deg);}
+        70% {transform: rotate(4deg);}
+        100% {transform: rotate(0deg);}
+    }
+}
 
 #turn {
     color: aliceblue;
