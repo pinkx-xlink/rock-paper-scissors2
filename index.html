@@ -95,6 +95,7 @@
 
     function playRound() {
     
+        this.playerSelection;
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
@@ -108,14 +109,16 @@
             //randomly choose 1
             //use return, not console.log
             do {
-                win();
+                let playerScore = 0;
+                ++playerScore;
                 break;
             } while (playerSelection === `rock` && computerSelection == "scissors" ||
                     playerSelection === `paper` && computerSelection == "rock" ||
                     playerSelection === `scissors` && computerSelection == "paper");
     
             do {
-                lose();
+                let computerScore = 0;
+                ++computerScore;
                 break;
             } while (playerSelection === `paper` && computerSelection == "scissors" ||
                     playerSelection === `scissors` && computerSelection == "rock" ||
