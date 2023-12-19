@@ -37,11 +37,7 @@
     displayPlayerScore.textContent = `Player score: ${playerScore}`;
     scoreBoard.appendChild(displayPlayerScore);
     
-    let computerScore = 0;
-    displayComputerScore = document.createElement('p');
-    displayComputerScore.classList.add('p');
-    displayComputerScore.textContent = `Computer's score: ${computerScore}`;
-    scoreBoard.appendChild(displayComputerScore);
+
     function win() {
         ++playerScore;
         console.log("You win!");
@@ -50,14 +46,7 @@
         youWin.textContent = "YOU WON! :D"
         scoreBoard.appendChild(youWin);
     }
-    function lose() {
-        ++computerScore;
-        console.log("you lose lol");
-        const youLost = document.createElement('p');
-        youLost.classList.add('p');
-        youLost.textContent = "YOU LOST! D:"
-        scoreBoard.appendChild(youLost);
-    }
+    
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
@@ -117,9 +106,22 @@
                     playerSelection === `scissors` && computerSelection == "paper");
     
             do {
-                let computerScore = 0;
-                ++computerScore;
-                break;
+                function lose() {
+                    let computerScore = 0;
+                    ++computerScore;
+                    console.log("you lose lol");
+                    const youLost = document.createElement('p');
+                    youLost.classList.add('p');
+                    youLost.textContent = "YOU LOST! D:"
+                    scoreBoard.appendChild(youLost);
+                    displayComputerScore = document.createElement('p');
+                    displayComputerScore.classList.add('p');
+                    displayComputerScore.textContent = `Computer's score: ${computerScore}`;
+                    scoreBoard.appendChild(displayComputerScore);
+                    
+                }
+                
+                
             } while (playerSelection === `paper` && computerSelection == "scissors" ||
                     playerSelection === `scissors` && computerSelection == "rock" ||
                     playerSelection === `rock` && computerSelection == "paper");
