@@ -10,11 +10,9 @@
     <h1>✂️ Rock, Paper, SCISSORS! ✂️</h1>
     <!-- <button id="play">Play Game?</button> -->
     <!-- "onclick", game() removed but maybe add back later -->
-    <div id="scoreBoard">SCOREBOARD
-    </div>
-    <div id="options">
-        <div id="winner"></div>
-    </div>
+    <div id="scoreBoard">SCOREBOARD</div>
+    <div id="winner"></div>
+    <div id="options"></div>
     <div id="turn">Turn: </div>
     
  
@@ -48,7 +46,9 @@
     scoreBoard.appendChild(displayComputerScore);
     
 
-    const winner = document.querySelector("#winner");
+    let winner = document.querySelector("#winner");
+    winner.textContent = "And the winner is..."
+    winner.innerHTML = `<p>And the winner is.....</p>`;
         // function displayWinner() {
         //     if (win()) {
         //         winner.innerHTML = `<p> You Win! </p>`;
