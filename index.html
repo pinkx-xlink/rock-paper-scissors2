@@ -19,18 +19,12 @@
 </body>
 
 <script>
-    //document.getElementById("play").addEventListener("click", playRound);
     
     const options = document.querySelector("#options");
     options.addEventListener("click", playRound);
     
 
     const scoreBoard = document.querySelector("#scoreBoard");
-    // scoreBoard.classList.add('div');
-    // scoreBoard.setAttribute('id', 'scoreBoard');
-    // scoreBoard.textContent = "SCOREBOAR";
-    // scores.appendChild(scoreBoard);
-
 
     let playerScore = 0;
     displayPlayerScore = document.createElement('p');
@@ -48,24 +42,9 @@
     let winner = document.querySelector("#winner");
     winner.textContent = "And the winner is..."
     winner.innerHTML = `<p>And the winner is.....</p>`;
-        // function displayWinner() {
-        //     if (win()) {
-        //         winner.innerHTML = `<p> You Win! </p>`;
-        //     } else if (lose()) {
-        //         // const losingText = document.createElement('p');
-        //         // losingText.classList.add('p');
-        //         // losingText.textContent = `You LOST!`;
-        //         // winner.appendChild(losingText);
-        //         winner.innerHTML = `<p>You LOST! ):</p>`;
-        //     };
-        // };
 
     function win() {
         console.log("You win!");
-        // const youWin = document.createElement('p');
-        // youWin.classList.add('p');
-        // youWin.textContent = "YOU WON! :D"
-        // scoreBoard.appendChild(youWin);
         let newPlayerScore = (++playerScore);
         console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
@@ -75,22 +54,19 @@
 
     function lose() {
         console.log("you lose lol");
-        // const youLost = document.createElement('p');
-        // youLost.classList.add('p');
-        // youLost.textContent = "YOU LOST! D:"
-        // scoreBoard.appendChild(youLost);
         let newComputerScore = ( ++computerScore);
         console.log(newComputerScore);
         displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
         winner.innerHTML = `<p>You LOST! ):</p>`;
     }
 
-    
-    
+
+
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
     rock.setAttribute('id', 'rock');
     rock.addEventListener("click", getPlayerSelection);
+    
     rock.classList.add('button');
     rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
     options.appendChild(rock);
@@ -114,12 +90,11 @@
     turn.innerHTML = `<p></p>`;
     let playerSelection;
     function getPlayerSelection() {
+        
         console.log(`Player chose ${this.name}`);
-                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
         const playerChose = document.createElement('p');
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.name}`;
-        //turn.appendChild(playerChose);
         playerSelection = this.name;
         return playerSelection;
     }
@@ -133,7 +108,6 @@
             const computerChose = document.createElement('p');
             computerChose.classList.add('p');
             computerChose.textContent = `Computer chose: ${computerSelection}`;
-            //turn.appendChild(computerChose);
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
@@ -165,22 +139,22 @@
             }; 
         };
 
-        function game() {
-            playRound();
-            playRound();
-            playRound();
-            playRound();
-            playRound();
-            if (computerScore > playerScore) {
-                scoreBoard.innerHTML = `
-                <p>Computer Won this Game!</p>
-                <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
-            } else if (playerScore > computerScore) {
-                scoreBoard.innerHTML = `
-                <p>Player Won this Game!</p>
-                <p> Player Score: ${playerScore} out of 5 rounds</p>`;
-            }
-        };
-        game();
+    function game() {
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        if (computerScore > playerScore) {
+            scoreBoard.innerHTML = `
+            <p>Computer Won this Game!</p>
+            <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
+        } else if (playerScore > computerScore) {
+            scoreBoard.innerHTML = `
+            <p>Player Won this Game!</p>
+            <p> Player Score: ${playerScore} out of 5 rounds</p>`;
+        }
+    };
+    game();
 </script>
 </html>
