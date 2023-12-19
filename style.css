@@ -8,6 +8,8 @@ body {
 
 h1 {
     color: aliceblue;
+    display: flex;
+    justify-content: center;
 }
 
 #winner {
