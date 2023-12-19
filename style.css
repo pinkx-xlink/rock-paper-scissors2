@@ -41,7 +41,7 @@ button {
 button:hover {
     background-image: linear-gradient(to bottom left, rgba(128, 0, 128, 0.692), rgba(9, 59, 196, 0.753));
     box-shadow: white -5px 5px 15px;
-    animation: shaking 0.5s;}
+    animation: shaking 0.2s;}
     @keyframes shaking {
         0% {transform: rotate(0deg);}
         20% {transform: rotate(-4deg);}
