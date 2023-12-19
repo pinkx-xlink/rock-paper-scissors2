@@ -80,7 +80,7 @@
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
     
-    let playerSelection = getPlayerSelection;
+    let playerSelection;
     function getPlayerSelection() {
         console.log(`Player chose ${this.name}`);
                 // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
@@ -91,9 +91,6 @@
         playerSelection = this.name;
         return playerSelection;
     }
-
-
-    
 
     function playRound() {
         this.playerSelection;
@@ -108,29 +105,22 @@
             computerChose.textContent = `Computer chose: ${computerSelection}`;
             scores.appendChild(computerChose);
             console.log(`Computer chose ${computerSelection}`);
-
-           
             //randomly choose 1
-        //after removing from inside playRound, function runs
-        //before click, and doesn't run again when player clicks.
-      
-        
         //use return, not console.log
     }
 
-
     function findWinner() {
-            if (this.name === `rock` && computerSelection == "scissors") {
+            if (playerSelection === `rock` && computerSelection == "scissors") {
+                console.log("butt");
+            } else if (playerSelection === `scissors` && computerSelection == "paper") {
                 win();
-            } else if (this.name === `scissors` && computerSelection == "paper") {
+            } else if (playerSelection === `paper` && computerSelection == "rock") {
                 win();
-            } else if (this.name === `paper` && computerSelection == "rock") {
-                win();
-            } else if (this.name === `rock` && computerSelection == "paper") {
+            } else if (playerSelection === `rock` && computerSelection == "paper") {
                 return lose();
-            } else if (this.name === `paper` && computerSelection == "scissors") {
+            } else if (playerSelection === `paper` && computerSelection == "scissors") {
                 return lose();
-            } else if (this.name === `scissors` && computerSelection == "rock") {
+            } else if (playerSelection === `scissors` && computerSelection == "rock") {
                 return lose();
             } 
     }
