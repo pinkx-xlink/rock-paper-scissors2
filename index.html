@@ -25,7 +25,7 @@
     let computerScore = 0;
 
     options.textContent = "options";
-    options.addEventListener("click", playRound);
+    options.addEventListener("click", getPlayerSelection);
     
     const rock = document.createElement('button');
     rock.setAttribute('id', 'rock');
@@ -49,18 +49,16 @@
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
     
-    const playerSelection = () => {
-        function getPlayerSelection() { 
-            console.log(`Player chose ${this.id}`);
+    let playerSelection;
+    function getPlayerSelection() {
+        console.log(`Player chose ${this.id}`);
                 // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
-            const playerChose = document.createElement('p');
-            playerChose.classList.add('p');
-            playerChose.textContent = `Player chose: ${this.id}`;
-            scores.appendChild(playerChose);
-            playerChose.textContent = `Player chose: ${this.id}`;
-            return playerSelection;
-            playRound()
-        }
+        const playerChose = document.createElement('p');
+        playerChose.classList.add('p');
+        playerChose.textContent = `Player chose: ${this.id}`;
+        scores.appendChild(playerChose);
+        playerChose.textContent = `Player chose: ${this.id}`;
+        return playerSelection;
     }
 
 
