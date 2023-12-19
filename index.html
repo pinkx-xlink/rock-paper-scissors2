@@ -12,7 +12,7 @@
     <!-- "onclick", game() removed but maybe add back later -->
     
     <div id="options"></div>
-    <div id="scores">Scores: </div>
+    <div id="turn">Turn: </div>
  
 </body>
 
@@ -21,7 +21,7 @@
     
     const options = document.querySelector("#options");
     options.addEventListener("click", playRound);
-    const scores = document.querySelector("#scores");
+    const turn = document.querySelector("#turn");
 
 
     const scoreBoard = document.createElement('div');
