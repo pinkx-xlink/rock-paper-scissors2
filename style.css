@@ -6,6 +6,9 @@ body {
     background-image: radial-gradient(black, rgb(15, 8, 8));
 }
 
+h1 {
+    color: aliceblue;
+}
 #options {
     background-color: pink;
     display: flex;
