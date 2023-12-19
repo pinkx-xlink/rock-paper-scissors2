@@ -42,13 +42,14 @@
     displayComputerScore.classList.add('p');
     displayComputerScore.textContent = `Computer's score: ${computerScore}`;
     scoreBoard.appendChild(displayComputerScore);
+    
     function win() {
-        ++playerScore;
         console.log("You win!");
         const youWin = document.createElement('p');
         youWin.classList.add('p');
         youWin.textContent = "YOU WON! :D"
         scoreBoard.appendChild(youWin);
+        return (++playerScore);
     }
     function lose() {
         ++computerScore;
@@ -121,7 +122,6 @@
                 return lose();
             } else { console.log("TIE!");
             };
-
         };
 
     
