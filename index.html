@@ -72,9 +72,17 @@
     const winner = document.querySelector("#winner");
     function displayWinner() {
         if (win()) {
-
-        }
-    }
+            const winningText = document.createElement('p');
+            winningText.classList.add('p');
+            winningText.textContent = `You win!`;
+            winner.appendChild(winningText);
+        } else if (lose()) {
+            const losingText = document.createElement('p');
+            losingText.classList.add('p');
+            losingText.textContent = `You LOST!`;
+            winner.appendChild(losingText);
+        };
+    };
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
