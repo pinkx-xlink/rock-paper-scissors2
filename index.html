@@ -110,16 +110,16 @@
             do {
                 win();
                 break;
-            } while (playerSelection == `rock` && computerSelection == "scissors",
-                    playerSelection == `paper` && computerSelection == "rock",
-                    playerSelection == `scissors` && computerSelection == "paper");
+            } while (playerSelection === `rock` && computerSelection == "scissors" ||
+                    playerSelection === `paper` && computerSelection == "rock" ||
+                    playerSelection === `scissors` && computerSelection == "paper");
     
             do {
                 lose();
                 break;
-            } while (playerSelection == `paper` && computerSelection == "scissors",
-                    playerSelection == `scissors` && computerSelection == "rock",
-                    playerSelection == `rock` && computerSelection == "paper");
+            } while (playerSelection === `paper` && computerSelection == "scissors" ||
+                    playerSelection === `scissors` && computerSelection == "rock" ||
+                    playerSelection === `rock` && computerSelection == "paper");
         }
 
     
