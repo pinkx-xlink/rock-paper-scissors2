@@ -108,20 +108,21 @@
             //use return, not console.log
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
-                console.log("you win");
+                win();
             } else if ((playerSelection) == "paper" && computerSelection == "rock") {
-                console.log("you win");
+                win();
             } else if ((playerSelection) == "scissors" && computerSelection == "paper") {
-                console.log("you win");
+                win();
             } else if ((playerSelection) == "scissors" && computerSelection == "rock") {
-                console.log("you LOST");
+                lose();
             } else if ((playerSelection) == "rock" && computerSelection == "paper") {
-                console.log("you LOST");
+                lose();
             } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
-                console.log("you LOST");
-            } 
+                lose();
+            } else { console.log("TIE!");
+            };
 
-        }
+        };
 
     
     
