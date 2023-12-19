@@ -28,10 +28,11 @@
     scores.appendChild(scoreBoard);
 
     let playerScore = 0;
-    playerScore = document.createElement('p');
-    playerScore.classList.add('p');
-    playerScore.textContent = `Player score: ${playerScore}`;
-    scoreBoard.appendChild(playerScore);
+    displayPlayerScore = document.createElement('p');
+    displayPlayerScore.classList.add('p');
+    displayPlayerScore.textContent = `Player score: ${playerScore}`;
+    scoreBoard.appendChild(displayPlayerScore);
+    
     let computerScore = 0;
 
     function win() {
