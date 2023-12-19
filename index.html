@@ -94,7 +94,6 @@
     }
 
     function playRound() {
-        this.playerSelection;
     
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
@@ -108,8 +107,9 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
-          
-   
+            do {
+                console.log("YOU WON!");
+            } while (playerSelection == `rock` && computerSelection == "scissors");
     }
 
     
