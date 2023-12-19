@@ -49,6 +49,19 @@
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
     
+    const playerSelection = () => {
+            console.log(`Player chose ${this.id}`);
+                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
+            const playerChose = document.createElement('p');
+            playerChose.classList.add('p');
+            playerChose.textContent = `Player chose: ${this.id}`;
+            scores.appendChild(playerChose);
+            playerChose.textContent = `Player chose: ${this.id}`;
+            return playerSelection;
+        }
+
+
+
     function win() {
         return ++playerScore;
         console.log("You win!");
@@ -68,17 +81,7 @@
 
     function playRound() {
 
-        const playerSelection = () => {
-            console.log(`Player chose ${this.id}`);
-                // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
-            const playerChose = document.createElement('p');
-            playerChose.classList.add('p');
-            playerChose.textContent = `Player chose: ${this.id}`;
-            scores.appendChild(playerChose);
-            playerChose.textContent = `Player chose: ${this.id}`;
-            return playerSelection;
-        }
-
+    
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
