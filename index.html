@@ -108,14 +108,14 @@
             //randomly choose 1
             //use return, not console.log
             do {
-                console.log("YOU WON!");
+                win();
                 break;
             } while (playerSelection == `rock` && computerSelection == "scissors",
                     playerSelection == `paper` && computerSelection == "rock",
                     playerSelection == `scissors` && computerSelection == "paper");
     
             do {
-                console.log("YOU LOOOOOOST ): !");
+                lose();
                 break;
             } while (playerSelection == `paper` && computerSelection == "scissors",
                     playerSelection == `scissors` && computerSelection == "rock",
