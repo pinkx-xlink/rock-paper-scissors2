@@ -10,13 +10,15 @@ h1 {
     color: aliceblue;
 }
 #options {
-    background-color: pink;
+    background-color: rgba(255, 240, 192, 0.322);
     display: flex;
     flex-direction: row;
     max-width: 600;
     min-height: 200px;
     justify-content: space-evenly;
     align-items: center;
+    border: 3px solid white;
+    border-radius: 4px;
 }
 
 button {
@@ -26,9 +28,18 @@ button {
     width: 80px;
     background-image: linear-gradient(to bottom left, rgba(255, 255, 0, 0.651), rgb(196, 130, 9));
     border-radius: 5px;
+    border: 2px solid white;
     
 }
 
 #scoreBoard {
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0.219);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 4px;
+    color: aliceblue;
+    font-weight: bolder;
 }
