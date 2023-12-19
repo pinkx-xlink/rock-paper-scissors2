@@ -32,8 +32,8 @@
     // playerScore.classList.add('p');
     // playerScore.textContent = `Player score: ${playerScore}`;
     // scoreBoard.appendChild(playerScore);
-
     let computerScore = 0;
+
     function win() {
         return ++playerScore;
         console.log("You win!");
@@ -84,23 +84,8 @@
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.id}`;
         scores.appendChild(playerChose);
-        playerSelection = playerChose;
+        playerSelection = this.id;
         return playerSelection;
-
-        if (playerSelection == "#rock" && computerSelection == "scissors") {
-            return win();
-        } else if (playerSelection === "#scissors" && computerSelection == "paper") {
-            return win();
-        } else if (playerSelection === "#paper" && computerSelection == "rock") {
-            return win();
-        } else if (playerSelection === "#rock" && computerSelection == "paper") {
-            return lose();
-        } else if (playerSelection === "#paper" && computerSelection == "scissors") {
-            return lose();
-        } else if (playerSelection === "#scissors" && computerSelection == "rock") {
-            return lose();
-        }  
-        
     }
 
     
