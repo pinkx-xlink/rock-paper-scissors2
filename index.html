@@ -37,7 +37,11 @@
     displayPlayerScore.textContent = `Player score: ${playerScore}`;
     scoreBoard.appendChild(displayPlayerScore);
     
-
+    let computerScore = 0;
+    displayComputerScore = document.createElement('p');
+    displayComputerScore.classList.add('p');
+    displayComputerScore.textContent = `Computer's score: ${computerScore}`;
+    scoreBoard.appendChild(displayComputerScore);
     function win() {
         ++playerScore;
         console.log("You win!");
@@ -46,7 +50,14 @@
         youWin.textContent = "YOU WON! :D"
         scoreBoard.appendChild(youWin);
     }
-    
+    function lose() {
+        ++computerScore;
+        console.log("you lose lol");
+        const youLost = document.createElement('p');
+        youLost.classList.add('p');
+        youLost.textContent = "YOU LOST! D:"
+        scoreBoard.appendChild(youLost);
+    }
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
@@ -83,8 +94,6 @@
     }
 
     function playRound() {
-    
-        this.playerSelection;
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
@@ -97,32 +106,15 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
-            // do {
-            //     let playerScore = 0;
-            //     ++playerScore;
-            //     break;
-            // } while (playerSelection === `rock` && computerSelection == "scissors" ||
-            //         playerSelection === `paper` && computerSelection == "rock" ||
-            //         playerSelection === `scissors` && computerSelection == "paper");
-    
-            do {
-                function lose() {
-                    let computerScore = 0;
-                    ++computerScore;
-                    console.log("you lose lol");
-                    const youLost = document.createElement('p');
-                    youLost.classList.add('p');
-                    youLost.textContent = "YOU LOST! D:"
-                    scoreBoard.appendChild(youLost);
-                    displayComputerScore = document.createElement('p');
-                    displayComputerScore.classList.add('p');
-                    displayComputerScore.textContent = `Computer's score: ${computerScore}`;
-                    scoreBoard.appendChild(displayComputerScore);
-                };   
-            } while (playerSelection === `paper` && computerSelection == "scissors" ||
-                    playerSelection === `scissors` && computerSelection == "rock" ||
-                    playerSelection === `rock` && computerSelection == "paper");
-        };
+
+            if ((playerSelection) == "rock" && computerSelection == "scissors") {
+                console.log("you win");
+            } else if ((console.log(playerSelection)) == "paper" && computerSelection == "rock") {
+                console.log("you win");
+            }else if ((console.log(playerSelection)) == "scissors" && computerSelection == "paper") {
+                console.log("you win");
+            } 
+        }
 
     
     
