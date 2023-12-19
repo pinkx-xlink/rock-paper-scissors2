@@ -13,7 +13,7 @@
     <div id="scoreBoard">SCOREBOARD</div>
     <div id="winner"></div>
     <div id="options"></div>
-    <div id="turn">Turn: </div>
+    <div id="turn"> </div>
     
  
 </body>
@@ -57,17 +57,21 @@
         winner.innerHTML = `<p>You LOST! ):</p>`;
     }
 
-    function getWinner() {
-        if (computerScore > playerScore) {
-                scoreBoard.innerHTML = `
-                <p>Computer Won this Game!</p>
-                <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
-            } else if (playerScore > computerScore) {
-                scoreBoard.innerHTML = `
-                <p>Player Won this Game!</p>
-                <p> Player Score: ${playerScore} out of 5 rounds</p>`;
-            }
-        }
+    // function getWinner() {
+    //     function repeat(playRound, 5) {
+    //         for (i = 0; i < times; i++);
+    //     }
+    //     repeat();
+    //     if (computerScore > playerScore) {
+    //         scoreBoard.innerHTML = `
+    //         <p>Computer Won this Game!</p>
+    //         <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
+    //     } else if (playerScore > computerScore) {
+    //         scoreBoard.innerHTML = `
+    //         <p>Player Won this Game!</p>
+    //         <p> Player Score: ${playerScore} out of 5 rounds</p>`;
+    //     }
+    // };
 
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
@@ -145,15 +149,16 @@
                 console.log("TIE!");
             }; 
         };
-
-    function game() {
-        playRound();
-        playRound();
-        playRound();
-        playRound();
-        playRound();
-        getWinner();
-    };
-    game();
+        
+        let i = 0; 
+        const loop = function() {
+            while(i < 3) {
+                playRound();
+                i++;
+                console.log("play again");
+            }
+        }
+        loop();
+        
 </script>
 </html>
