@@ -22,6 +22,11 @@
     const scores = document.querySelector("#scores");
 
     let playerScore = 0;
+    playerScore.classList.add('p');
+    playerScore.textContent = `Player's score: ${playerScore}`;
+    
+    scores.appendChild(playerScore);
+
     let computerScore = 0;
 
     options.textContent = "options";
@@ -60,8 +65,6 @@
         playerChose.textContent = `Player chose: ${this.id}`;
         return playerSelection;
     }
-
-
 
     function win() {
         return ++playerScore;
