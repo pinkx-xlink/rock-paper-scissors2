@@ -87,20 +87,21 @@
         playerSelection = this.name;
         return playerSelection;
 
-        
-        if (this.name == 'rock' && computerSelection == "scissors") {
-            win();
-        } else if (this.name == 'scissors' && computerSelection == "paper") {
-            win();
-        } else if (this.name == 'paper' && computerSelection == "rock") {
-            win();
-        } else if (this.name == 'rock' && computerSelection == "paper") {
-            return lose();
-        } else if (this.name == 'paper' && computerSelection == "scissors") {
-            return lose();
-        } else if (this.name == 'scissors' && computerSelection == "rock") {
-            return lose();
-        }  
+        function findWinner() {
+            if (this.name == 'rock' && computerSelection == "scissors") {
+                win();
+            } else if (this.name == 'scissors' && computerSelection == "paper") {
+                win();
+            } else if (this.name == 'paper' && computerSelection == "rock") {
+                win();
+            } else if (this.name == 'rock' && computerSelection == "paper") {
+                return lose();
+            } else if (this.name == 'paper' && computerSelection == "scissors") {
+                return lose();
+            } else if (this.name == 'scissors' && computerSelection == "rock") {
+                return lose();
+            }  
+        }
     }
 
     
