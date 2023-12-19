@@ -19,6 +19,7 @@
     //document.getElementById("play").addEventListener("click", playRound);
     
     const options = document.querySelector("#options");
+    options.addEventListener("click", playRound);
     const scores = document.querySelector("#scores");
 
 
@@ -107,10 +108,8 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
         //use return, not console.log
-    }
-
-    function findWinner() {
-            if (playerSelection === `rock` && computerSelection == "scissors") {
+        function findWinner() {
+            if (playerChose == `rock` && computerSelection == "scissors") {
                 console.log("butt");
             } else if (playerSelection === `scissors` && computerSelection == "paper") {
                 win();
@@ -124,6 +123,9 @@
                 return lose();
             } 
     }
+    }
+
+    
     
 
     // function game() {
