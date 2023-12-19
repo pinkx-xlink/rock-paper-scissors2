@@ -53,12 +53,9 @@ button:hover {
 
 #turn {
     color: aliceblue;
-    max-width: 400px;
-    gap: 20px;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 #scoreBoard {
