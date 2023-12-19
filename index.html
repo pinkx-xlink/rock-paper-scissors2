@@ -109,11 +109,18 @@
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 console.log("you win");
-            } else if ((console.log(playerSelection)) == "paper" && computerSelection == "rock") {
+            } else if ((playerSelection) == "paper" && computerSelection == "rock") {
                 console.log("you win");
-            }else if ((console.log(playerSelection)) == "scissors" && computerSelection == "paper") {
+            } else if ((playerSelection) == "scissors" && computerSelection == "paper") {
                 console.log("you win");
+            } else if ((playerSelection) == "scissors" && computerSelection == "rock") {
+                console.log("you LOST");
+            } else if ((playerSelection) == "rock" && computerSelection == "paper") {
+                console.log("you LOST");
+            } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
+                console.log("you LOST");
             } 
+
         }
 
     
