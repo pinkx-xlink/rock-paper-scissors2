@@ -97,13 +97,13 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
-            do {
-                let playerScore = 0;
-                ++playerScore;
-                break;
-            } while (playerSelection === `rock` && computerSelection == "scissors" ||
-                    playerSelection === `paper` && computerSelection == "rock" ||
-                    playerSelection === `scissors` && computerSelection == "paper");
+            // do {
+            //     let playerScore = 0;
+            //     ++playerScore;
+            //     break;
+            // } while (playerSelection === `rock` && computerSelection == "scissors" ||
+            //         playerSelection === `paper` && computerSelection == "rock" ||
+            //         playerSelection === `scissors` && computerSelection == "paper");
     
             do {
                 function lose() {
@@ -118,14 +118,11 @@
                     displayComputerScore.classList.add('p');
                     displayComputerScore.textContent = `Computer's score: ${computerScore}`;
                     scoreBoard.appendChild(displayComputerScore);
-                    
-                }
-                
-                
+                };   
             } while (playerSelection === `paper` && computerSelection == "scissors" ||
                     playerSelection === `scissors` && computerSelection == "rock" ||
                     playerSelection === `rock` && computerSelection == "paper");
-        }
+        };
 
     
     
