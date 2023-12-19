@@ -59,17 +59,6 @@
     scissors.classList.add('button');
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
-
-    function getComputerChoice(array) {
-            return array[Math.floor(Math.random() * array.length)];
-            }
-            const array = ["rock", "paper", "scissors"];
-            const computerSelection = getComputerChoice(array);
-            const computerChose = document.createElement('p');
-            computerChose.classList.add('p');
-            computerChose.textContent = `Computer chose: ${computerSelection}`;
-            scores.appendChild(computerChose);
-            console.log(`Computer chose ${computerSelection}`);
     
     let playerSelection = getPlayerSelection;
     function getPlayerSelection() {
@@ -119,7 +108,16 @@
     function playRound() {
 
     
-        
+        function getComputerChoice(array) {
+            return array[Math.floor(Math.random() * array.length)];
+            }
+            const array = ["rock", "paper", "scissors"];
+            const computerSelection = getComputerChoice(array);
+            const computerChose = document.createElement('p');
+            computerChose.classList.add('p');
+            computerChose.textContent = `Computer chose: ${computerSelection}`;
+            scores.appendChild(computerChose);
+            console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
