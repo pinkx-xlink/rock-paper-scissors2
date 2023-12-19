@@ -60,7 +60,7 @@
     scissors.textContent = "scissors";
     options.appendChild(scissors);  
     
-    let playerSelection;
+    let playerSelection = getPlayerSelection;
     function getPlayerSelection() {
         console.log(`Player chose ${this.id}`);
                 // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
@@ -68,8 +68,9 @@
         playerChose.classList.add('p');
         playerChose.textContent = `Player chose: ${this.id}`;
         scores.appendChild(playerChose);
-        playerChose.textContent = `Player chose: ${this.id}`;
+        playerSelection = playerChose;
         return playerSelection;
+        
     }
 
 
