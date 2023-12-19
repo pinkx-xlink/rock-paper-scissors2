@@ -81,8 +81,8 @@
             //randomly choose 1
         //after removing from inside playRound, function runs
         //before click, and doesn't run again when player clicks.
-        let playerSelection = getPlayerSelection;
-            function getPlayerSelection() {
+
+        let playerSelection = () => {
             console.log(`Player chose ${this.id}`);
                 // playerSelection = getPlayerSelection; does the same as playerSelection = this.id
             const playerChose = document.createElement('p');
