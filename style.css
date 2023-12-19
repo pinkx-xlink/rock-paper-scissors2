@@ -19,9 +19,7 @@ h1 {
     border: 3px solid white;
     border-radius: 4px;
 }
-#rock {
-    background-image: url(img/rock.png);
-}
+
 button {
     min-height: 50px;
     height: 80px;
