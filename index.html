@@ -136,6 +136,9 @@
             console.log(`Computer chose ${computerSelection}`);
             //randomly choose 1
             //use return, not console.log
+            turn.innerHTML = `
+            <p>Player chose ${playerSelection}
+            <p>Computer chose ${computerSelection}`;
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 return win();
