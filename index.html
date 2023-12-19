@@ -11,8 +11,6 @@
     <!-- <button id="play">Play Game?</button> -->
     <!-- "onclick", game() removed but maybe add back later -->
     <div id="scoreBoard">SCOREBOARD
-        <p id="winningText">You win!</p>
-        <p id = "losingText">You Lost ):</p>
     </div>
     <div id="options"></div>
     <div id="turn">Turn: </div>
@@ -34,8 +32,7 @@
     // scoreBoard.textContent = "SCOREBOAR";
     // scores.appendChild(scoreBoard);
 
-    const winningText = document.querySelector('#winningText');
-    const losingText = document.querySelector('#losingText');
+
     let playerScore = 0;
     displayPlayerScore = document.createElement('p');
     displayPlayerScore.classList.add('p');
