@@ -108,17 +108,17 @@
             //use return, not console.log
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
-                win();
+                return win();
             } else if ((playerSelection) == "paper" && computerSelection == "rock") {
-                win();
+                return win();
             } else if ((playerSelection) == "scissors" && computerSelection == "paper") {
-                win();
+                return win();
             } else if ((playerSelection) == "scissors" && computerSelection == "rock") {
-                lose();
+                return lose();
             } else if ((playerSelection) == "rock" && computerSelection == "paper") {
-                lose();
+                return lose();
             } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
-                lose();
+                return lose();
             } else { console.log("TIE!");
             };
 
