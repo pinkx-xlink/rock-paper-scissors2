@@ -57,22 +57,8 @@
         winner.innerHTML = `<p>You LOST! ):</p>`;
     }
 
-    // function getWinner() {
-    //     function repeat(playRound, 5) {
-    //         for (i = 0; i < times; i++);
-    //     }
-    //     repeat();
-    //     if (computerScore > playerScore) {
-    //         scoreBoard.innerHTML = `
-    //         <p>Computer Won this Game!</p>
-    //         <p> Computer Score: ${computerScore} out of 5 rounds</p>`;
-    //     } else if (playerScore > computerScore) {
-    //         scoreBoard.innerHTML = `
-    //         <p>Player Won this Game!</p>
-    //         <p> Player Score: ${playerScore} out of 5 rounds</p>`;
-    //     }
-    // };
-
+    let rounds = (+(playerScore) + +(computerScore));
+    
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
     rock.setAttribute('id', 'rock');
@@ -110,7 +96,7 @@
         return playerSelection;
     }
 
-    const rounds = (playerScore + computerScore);
+    
     function playRound() {
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
