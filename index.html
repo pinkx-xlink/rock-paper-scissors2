@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✂️ My Lil' Rock Paper Scissors Project ✂️</title>
+    <link rel="stylesheet" href = "style.css">
 </head>
 <body>
     <h1>✂️ Rock, Paper, SCISSORS! ✂️</h1>
@@ -20,6 +21,7 @@
     
     const options = document.querySelector("#options");
     options.addEventListener("click", playRound);
+    options.textContent = "options";
     const scores = document.querySelector("#scores");
 
 
@@ -56,8 +58,7 @@
         scores.appendChild(youLost);
     }
 
-    options.textContent = "options";
-    options.addEventListener("click", playRound);
+   
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
