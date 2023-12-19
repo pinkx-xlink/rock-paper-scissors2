@@ -47,6 +47,20 @@
     displayComputerScore.textContent = `Computer's score: ${computerScore}`;
     scoreBoard.appendChild(displayComputerScore);
     
+
+    const winner = document.querySelector("#winner");
+        // function displayWinner() {
+        //     if (win()) {
+        //         winner.innerHTML = `<p> You Win! </p>`;
+        //     } else if (lose()) {
+        //         // const losingText = document.createElement('p');
+        //         // losingText.classList.add('p');
+        //         // losingText.textContent = `You LOST!`;
+        //         // winner.appendChild(losingText);
+        //         winner.innerHTML = `<p>You LOST! ):</p>`;
+        //     };
+        // };
+
     function win() {
         console.log("You win!");
         // const youWin = document.createElement('p');
@@ -56,6 +70,8 @@
         let newPlayerScore = (++playerScore);
         console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
+        winner.innerHTML = `<p> You Win! </p>`;
+        
     }
 
     function lose() {
@@ -67,6 +83,7 @@
         let newComputerScore = ( ++computerScore);
         console.log(newComputerScore);
         displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
+        winner.innerHTML = `<p>You LOST! ):</p>`;
     }
 
     
@@ -140,18 +157,7 @@
             } else { console.log("TIE!");
             };
 
-            const winner = document.querySelector("#winner");
-            function displayWinner() {
-                if (win()) {
-                    winner.innerHTML = `<p> You Win! </p>`;
-                } else if (lose()) {
-                    // const losingText = document.createElement('p');
-                    // losingText.classList.add('p');
-                    // losingText.textContent = `You LOST!`;
-                    // winner.appendChild(losingText);
-                    winner.innerHTML = `<p>You LOST! ):</p>`;
-                };
-            };
+            
         };
 
     
