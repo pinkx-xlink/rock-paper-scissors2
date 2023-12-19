@@ -34,6 +34,22 @@
     // scoreBoard.appendChild(playerScore);
 
     let computerScore = 0;
+    function win() {
+        return ++playerScore;
+        console.log("You win!");
+        const youWin = document.createElement('p');
+        youWin.classList.add('p');
+        youWin.textContent = "YOU WON! :D"
+        scores.appendChild(youWin);
+    }
+    function lose() {
+        return ++computerScore;
+        console.log("you lose lol");
+        const youLost = document.createElement('p');
+        youLost.classList.add('p');
+        youLost.textContent = "YOU LOST! D:"
+        scores.appendChild(youLost);
+    }
 
     options.textContent = "options";
     options.addEventListener("click", playRound);
@@ -87,23 +103,7 @@
         
     }
 
-
-    function win() {
-        return ++playerScore;
-        console.log("You win!");
-        const youWin = document.createElement('p');
-        youWin.classList.add('p');
-        youWin.textContent = "YOU WON! :D"
-        scores.appendChild(youWin);
-    }
-    function lose() {
-        return ++computerScore;
-        console.log("you lose lol");
-        const youLost = document.createElement('p');
-        youLost.classList.add('p');
-        youLost.textContent = "YOU LOST! D:"
-        scores.appendChild(youLost);
-    }
+    
 
     function playRound() {
 
