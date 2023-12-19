@@ -41,23 +41,25 @@
     winner.textContent = "And the winner is..."
     winner.innerHTML = `<p>And the winner is.....</p>`;
 
-    function win() {
+    function win(playerScore) {
         console.log("You win!");
         let newPlayerScore = (++playerScore);
         console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
         winner.innerHTML = `<p> You Win! </p>`;
+        return newPlayerScore;
     }
 
-    function lose() {
+    function lose(computerScore) {
         console.log("you lose lol");
         let newComputerScore = ( ++computerScore);
         console.log(newComputerScore);
         displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
         winner.innerHTML = `<p>You LOST! ):</p>`;
+        return newComputerScore;
     }
 
-    let rounds = (+(playerScore) + +(computerScore));
+    
     
     const rock = document.createElement('button');
     rock.setAttribute('name', 'rock');
@@ -112,6 +114,8 @@
             turn.innerHTML = `
             <p>Player chose ${playerSelection}
             <p>Computer chose ${computerSelection}`;
+
+           // let rounds = prompt(`${playerScore} + ${computerScore}`);
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 return win();
