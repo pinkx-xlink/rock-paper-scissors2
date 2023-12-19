@@ -41,6 +41,7 @@
     winner.textContent = "And the winner is..."
     winner.innerHTML = `<p>And the winner is.....</p>`;
 
+    
     function win(playerScore) {
         console.log("You win!");
         let newPlayerScore = (++playerScore);
@@ -98,7 +99,7 @@
         return playerSelection;
     }
 
-    
+    let rounds = 0;
     function playRound() {
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
