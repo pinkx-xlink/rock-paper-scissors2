@@ -92,7 +92,7 @@
     rock.setAttribute('id', 'rock');
     rock.addEventListener("click", getPlayerSelection);
     rock.classList.add('button');
-    rock.innerHTML = `<image src="/img/rock.png" height="55px"/>`;
+    rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
     options.appendChild(rock);
 
     const paper = document.createElement('button');
@@ -106,7 +106,8 @@
     scissors.setAttribute('name', 'scissors');
     scissors.addEventListener("click", getPlayerSelection);
     scissors.classList.add('button');
-    scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
+    scissors.innerHTML = `
+    <image src="./img/scissors.png" height="55px" />`;
     options.appendChild(scissors);  
     
     const turn = document.querySelector("#turn");
