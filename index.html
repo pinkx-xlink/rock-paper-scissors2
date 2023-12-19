@@ -112,7 +112,13 @@
             } while (playerSelection == `rock` && computerSelection == "scissors",
                     playerSelection == `paper` && computerSelection == "rock",
                     playerSelection == `scissors` && computerSelection == "paper");
-    }
+    
+            do {
+                console.log("YOU LOOOOOOST ): !");
+            } while (playerSelection == `paper` && computerSelection == "scissors",
+                    playerSelection == `scissors` && computerSelection == "rock",
+                    playerSelection == `rock` && computerSelection == "paper");
+        }
 
     
     
