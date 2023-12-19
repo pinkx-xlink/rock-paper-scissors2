@@ -70,6 +70,20 @@
         scores.appendChild(playerChose);
         playerSelection = playerChose;
         return playerSelection;
+
+        if (playerSelection == "rock" && computerSelection == "scissors") {
+            return win();
+        } else if (playerSelection == "scissors" && computerSelection == "paper") {
+            return win();
+        } else if (playerSelection == "paper" && computerSelection == "rock") {
+            return win();
+        } else if (playerSelection == "rock" && computerSelection == "paper") {
+            return lose();
+        } else if (playerSelection == "paper" && computerSelection == "scissors") {
+            return lose();
+        } else if (playerSelection == "scissors" && computerSelection == "rock") {
+            return lose();
+        }  
         
     }
 
@@ -110,19 +124,7 @@
       
         
 
-        if (playerSelection == "rock" && computerSelection == "scissors") {
-            return win();
-        } else if (playerSelection == "scissors" && computerSelection == "paper") {
-            return win();
-        } else if (playerSelection == "paper" && computerSelection == "rock") {
-            return win();
-        } else if (playerSelection == "rock" && computerSelection == "paper") {
-            return lose();
-        } else if (playerSelection == "paper" && computerSelection == "scissors") {
-            return lose();
-        } else if (playerSelection == "scissors" && computerSelection == "rock") {
-            return lose();
-        }  
+    
 
         //use return, not console.log
     }
