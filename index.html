@@ -34,7 +34,10 @@
     scoreBoard.appendChild(displayPlayerScore);
     
     let computerScore = 0;
-
+    displayComputerScore = document.createElement('p');
+    displayComputerScore.classList.add('p');
+    displayComputerScore.textContent = `Computer's score: ${computerScore}`;
+    scoreBoard.appendChild(displayComputerScore);
     function win() {
         return ++playerScore;
         console.log("You win!");
