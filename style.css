@@ -53,6 +53,7 @@ button:hover {
 
 #turn {
     color: aliceblue;
+    font-weight: bold;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
