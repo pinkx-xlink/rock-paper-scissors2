@@ -26,7 +26,21 @@ How silly of me.
 ...At least I can say I learned something today!
 
 In the 9th hour, I've finished the project (part 2) requirements.
-The game runs 4 rounds before alerting Game Over, 
+The game runs 4 rounds before alerting Game Over and showing the final scores. I took a break from the JavaScript portion while I was feeling stumped, and I added just enough CSS to make the project no longer an eyesore (or invisible outside of the console). 
+
+I plan on adding onto this project more in the near future. Just some fine details:
+- different audio clips on click for each btn
+- a hidden loading screen with a Start Game? btn
+- a hidden Game Over screen with a Play Again? option
+- more ... *pazazz* with the color scheme and over all animation
+
+BUT, for now, I'm happy with the end result.
+This project demanded about 16.5 fun-filled joyous hours.
+It helped me form a much better grasp of loops and their syntax, reinforced my understanding of creating and manipulating HTML elements with JavaScript, and presented me multiple opportunities to strengthen my know-how on updating elements' innerHTML so that the text/element updates on the page in real time instead of stacking new text elements over and over (and over...) again.
+I added a @keyframes animation to the buttons to give the project a little ~spice~ but overall kept the design pretty tame.
+My biggest (and probably silliest) obstacle was not being able to target playerSelection during part 2 of the project for HOURS of trial and error, simply because i didn't put parentheses around it in the if/else statement. It was a great learning opportunity for me though, teaching me to pay better attention to how different objects store the data I'm trying to pull. 
+This project left me feeling stumped a handful of times, but it was a great challenge! I had a lot of fun with this. :)
+
 
 Credits:
 
