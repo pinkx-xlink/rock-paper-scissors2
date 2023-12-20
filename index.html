@@ -42,7 +42,7 @@
     winner.innerHTML = `<p>And the winner is.....</p>`;
 
     
-    function win(playerScore) {
+    function win() {
         console.log("You win!");
         let newPlayerScore = (++playerScore);
         console.log(newPlayerScore);
@@ -51,7 +51,7 @@
         return newPlayerScore;
     }
 
-    function lose(computerScore) {
+    function lose() {
         console.log("you lose lol");
         let newComputerScore = ( ++computerScore);
         console.log(newComputerScore);
@@ -101,6 +101,8 @@
 
     let rounds = 0;
     function playRound() {
+        ++rounds;
+        console.log(rounds);
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
             }
