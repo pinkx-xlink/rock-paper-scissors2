@@ -25,6 +25,9 @@ if (playerSelection == 'rock' && computerSelection == 'scissors') {
 How silly of me.
 ...At least I can say I learned something today!
 
+In the 9th hour, I've finished the project (part 2) requirements.
+The game runs 4 rounds before alerting Game Over, 
+
 Credits:
 
 paper img source: https://th.bing.com/th/id/R.6949ee86b3ab0fee993f170a72fd2d04?rik=JL95HtGeovF7Ww&riu=http%3a%2f%2fpixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com%2fimage%2f7346e1cdfa07a65.png&ehk=jkWnpPx9791BIDLVRunZMPQJ6Y7x1UlTxv8S3qtQ06E%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
