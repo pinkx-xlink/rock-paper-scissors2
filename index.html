@@ -102,6 +102,22 @@
     let rounds = 0;
     function playRound() {
         ++rounds;
+        // const roundCounter = document.createElement('p');
+        // roundCounter.classList.add('p');
+        // roundCounter.innerHTML = `<p>Round: ${rounds}</p>`;
+        // scoreBoard.appendChild(roundCounter);
+        let loop = function () {
+            if (rounds < 4) {
+                console.log("play again");
+            } else if (rounds === 4) {
+                prompt("GAME OVER");
+                console.log(`Player score: ${playerScore}`);
+                console.log(`Computer score: ${computerScore}`);
+                rounds = 0;
+            }
+        };
+        loop();
+
         console.log(rounds);
         function getComputerChoice(array) {
             return array[Math.floor(Math.random() * array.length)];
@@ -117,8 +133,6 @@
             turn.innerHTML = `
             <p>Player chose ${playerSelection}
             <p>Computer chose ${computerSelection}`;
-
-           // let rounds = prompt(`${playerScore} + ${computerScore}`);
 
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 return win();
@@ -144,14 +158,7 @@
             }; 
         }; 
         
-        let loop = function () {
-            if (rounds < 3) {
-                console.log("play again");
-            } else {
-                prompt("GAME OVER");
-            }
-        };
-        loop();
+        
 
 
         
