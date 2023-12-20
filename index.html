@@ -144,20 +144,16 @@
             }; 
         }; 
         
-        // let loop = function () {
-        //     let i = 0; 
-        //     for (i = 0; i < 3; i++) {
-        //         playRound();
-        //         i++;
-        //         console.log("play again");
-        //     } if (i === 3) {
-        //         console.log("GAME OVER");
-                
-        //     } else {
-        //         console.log("testing lol");
-        //     }
-        // };
-        // loop();
+        let loop = function () {
+            if (rounds < 3) {
+                console.log("play again");
+            } else {
+                prompt("GAME OVER");
+            }
+        };
+        loop();
+
+
         
 
 </script>
