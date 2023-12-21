@@ -42,6 +42,11 @@ My biggest (and probably silliest) obstacle was not being able to target playerS
 This project left me feeling stumped a handful of times, but it was a great challenge! I had a lot of fun with this. :)
 
 
+12/20/23
+I managed to make the round counter reset after 4 so that the if/else statement doesn't only work 4 and then become irrelevant at 5, 6, 7, etc. 
+Now the issue is that win() and lose() seem to sometimes fire after the round is complete. Meaning that even if the 4th round is over and the round counter resets to 0, either the player or computer can still sometimes display a win. I may have nested something weird or have a callback or something I keep looking past. 
+
+
 Credits:
 
 paper img source: https://th.bing.com/th/id/R.6949ee86b3ab0fee993f170a72fd2d04?rik=JL95HtGeovF7Ww&riu=http%3a%2f%2fpixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com%2fimage%2f7346e1cdfa07a65.png&ehk=jkWnpPx9791BIDLVRunZMPQJ6Y7x1UlTxv8S3qtQ06E%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
