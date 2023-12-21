@@ -12,7 +12,7 @@
     <h1>✂️ Rock, Paper, SCISSORS! ✂️</h1>
     <!-- <button id="play">Play Game?</button> -->
     <!-- "onclick", game() removed but maybe add back later -->
-    <div id="scoreBoard">SCOREBOARD</div>
+    <div id="scoreBoard">~ SCOREBOARD ~</div>
     <div id="winner"></div>
     <div id="options"></div>
     <div id="turn"> </div>
@@ -113,6 +113,8 @@
                 //onsole.log(`Player score: ${playerScore}`);
                 //console.log(`Computer score: ${computerScore}`);
                 rounds = 0;
+                displayPlayerScore.textContent = `Player score: 0`;
+                displayComputerScore.textContent = `Player score: 0`;
             }
         };
         loop();

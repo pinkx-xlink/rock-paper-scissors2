@@ -55,6 +55,7 @@ button:hover {
 #turn {
     color: aliceblue;
     font-weight: bold;
+    font-size: 20px;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
@@ -70,4 +71,5 @@ button:hover {
     border-radius: 4px;
     color: aliceblue;
     font-weight: bolder;
+    font-size: larger;
 }
