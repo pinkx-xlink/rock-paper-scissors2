@@ -108,11 +108,13 @@
         let loop = function () {
             if (rounds < 4) {
                 console.log("play again");
-            } else if (rounds === 4) {
+            } else if (rounds = 4) {
                 alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
                 //onsole.log(`Player score: ${playerScore}`);
                 //console.log(`Computer score: ${computerScore}`);
                 rounds = 0;
+                playerScore = 0;
+                computerScore = 0;
                 displayPlayerScore.textContent = `Player score: 0`;
                 displayComputerScore.textContent = `Player score: 0`;
             }
