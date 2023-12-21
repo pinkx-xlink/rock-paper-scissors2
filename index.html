@@ -46,19 +46,19 @@
     function win() {
         console.log("You win!");
         let newPlayerScore = (++playerScore);
-        console.log(newPlayerScore);
+        //console.log(newPlayerScore);
         displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
         winner.innerHTML = `<p> You Win! </p>`;
-        return newPlayerScore;
+       // return newPlayerScore;
     }
 
     function lose() {
         console.log("you lose lol");
-        let newComputerScore = ( ++computerScore);
-        console.log(newComputerScore);
+        let newComputerScore = (++computerScore);
+        //console.log(newComputerScore);
         displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
         winner.innerHTML = `<p>You LOST! ):</p>`;
-        return newComputerScore;
+       // return newComputerScore;
     }
 
     const rock = document.createElement('button');
@@ -113,6 +113,13 @@
                 //onsole.log(`Player score: ${playerScore}`);
                 //console.log(`Computer score: ${computerScore}`);
                 rounds = 0;
+                playerScore = 0;
+                computerScore = 0;
+                newPlayerScore = 0;
+                newComputerScore = 0;
+                displayPlayerScore.textContent = `Player score: 0`;
+                displayComputerScore.textContent = `Player score: 0`;
+            } else if (rounds = 0) {
                 playerScore = 0;
                 computerScore = 0;
                 newPlayerScore = 0;
