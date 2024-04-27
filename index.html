@@ -58,12 +58,17 @@
     }
 
     function lose() {
-        console.log("you lose lol");
+        if (rounds < 3) {
+            console.log("you lose lol");
         let newComputerScore = (++computerScore);
         //console.log(newComputerScore);
         displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
         winner.innerHTML = `<p>You LOST! ):</p>`;
         return newComputerScore;
+        } else {
+            return;
+        }
+        
     }
 
     const rock = document.createElement('button');
