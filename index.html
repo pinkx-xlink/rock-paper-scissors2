@@ -42,16 +42,23 @@
     winner.textContent = "And the winner is..."
     winner.innerHTML = `<p>And the winner is.....</p>`;
 
+    function resetScores() {
+        newPlayerScore = 0;
+        playerScore = 0;
+        newComputerScore = 0;
+        computerScore = 0;
+    }
     
     function win() {
         console.log("You win!");
         if (rounds < 3 ) {
             let newPlayerScore = (++playerScore);
-        //console.log(newPlayerScore);
-        displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
-        winner.innerHTML = `<p> You Win! </p>`;
-        return newPlayerScore;
+            //console.log(newPlayerScore);
+            displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
+            winner.innerHTML = `<p> You Win! </p>`;
+            return newPlayerScore;
         } else {
+            resetScores();
             return;
         }
         
@@ -60,12 +67,13 @@
     function lose() {
         if (rounds < 3) {
             console.log("you lose lol");
-        let newComputerScore = (++computerScore);
-        //console.log(newComputerScore);
-        displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
-        winner.innerHTML = `<p>You LOST! ):</p>`;
-        return newComputerScore;
+            let newComputerScore = (++computerScore);
+            //console.log(newComputerScore);
+            displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
+            winner.innerHTML = `<p>You LOST! ):</p>`;
+            return newComputerScore;
         } else {
+            resetScores();
             return;
         }
         
