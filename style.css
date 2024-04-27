@@ -2,6 +2,11 @@
     font-family: Silkscreen, sans-serif;
 }
 
+@keyframes colorChange {
+    0% { color: red; }
+    50% { color: yellow; }
+    100% { color: orange; }
+}
 body {
     background-image: radial-gradient(black, rgb(15, 8, 8));
 }
@@ -14,9 +19,10 @@ h1 {
 }
 
 #winner {
-    color: aliceblue;
+    color: orange;
     display: flex;
     justify-content: center;
+    animation: colorChange 2s infinite;
 }
 
 #options {
