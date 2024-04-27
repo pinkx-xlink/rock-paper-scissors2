@@ -51,34 +51,24 @@
         displayPlayerScore.innerHTML = '0';
     }
     
+    let newPlayerScore;
     function win() {
         console.log("You win!");
-        if (rounds < 3 ) {
             let newPlayerScore = (++playerScore);
             //console.log(newPlayerScore);
             displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
             winner.innerHTML = `<p> You Win! </p>`;
-            return newPlayerScore;
-        } else if (rounds = 3) {
-            
-            return;
-        }
-        
+            return newPlayerScore, newComputerScore;
     }
 
+    let newComputerScore;
     function lose() {
-        if (rounds < 3) {
             console.log("you lose lol");
             let newComputerScore = (++computerScore);
             //console.log(newComputerScore);
             displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
             winner.innerHTML = `<p>You LOST! ):</p>`;
-            return newComputerScore;
-        } else if (rounds = 3) {
-            
-            return;
-        }
-        
+            return newComputerScore, newPlayerScore;
     }
 
     const rock = document.createElement('button');
