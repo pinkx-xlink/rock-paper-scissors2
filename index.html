@@ -58,7 +58,7 @@
             //console.log(newPlayerScore);
             displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
             winner.innerHTML = `<p> You Win! </p>`;
-            return newPlayerScore, newComputerScore;
+            return;
     }
 
     let newComputerScore;
@@ -68,7 +68,7 @@
             //console.log(newComputerScore);
             displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
             winner.innerHTML = `<p>You LOST! ):</p>`;
-            return newComputerScore, newPlayerScore;
+            return;
     }
 
     const rock = document.createElement('button');
@@ -119,7 +119,8 @@
             if (rounds < 3) { 
                 console.log("play again");
             } else if (rounds = 3) {
-                alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
+                const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
+                //gameOverAlert.addEventListener(, resetScores());
                 //onsole.log(`Player score: ${playerScore}`);
                 //console.log(`Computer score: ${computerScore}`);
                 rounds = 0;
@@ -129,7 +130,7 @@
                 newComputerScore = 0;
                 displayPlayerScore.textContent = `Player score: 0`;
                 displayComputerScore.textContent = `Player score: 0`;
-                resetScores();
+                return resetScores();
             } else if (rounds = 0) {
                 playerScore = 0;
                 computerScore = 0;
@@ -137,6 +138,7 @@
                 newComputerScore = 0;
                 displayPlayerScore.textContent = `Player score: 0`;
                 displayComputerScore.textContent = `Player score: 0`;
+                return resetScores();
             }
         };
         loop();
@@ -156,7 +158,9 @@
             turn.innerHTML = `
             <p>Player chose ${playerSelection}
             <p>Computer chose ${computerSelection}`;
-
+            if (rounds > 3) {
+                
+            }
             if ((playerSelection) == "rock" && computerSelection == "scissors") {
                 return win();
                 displayWinner();
