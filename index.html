@@ -57,7 +57,7 @@
             displayPlayerScore.textContent = `Player's score: ${newPlayerScore}`;
             winner.innerHTML = `<p> You Win! </p>`;
             return newPlayerScore;
-        } else {
+        } else if (rounds = 3) {
             resetScores();
             return;
         }
@@ -72,7 +72,7 @@
             displayComputerScore.textContent = `Computer's score: ${newComputerScore}`;
             winner.innerHTML = `<p>You LOST! ):</p>`;
             return newComputerScore;
-        } else {
+        } else if (rounds = 3) {
             resetScores();
             return;
         }
