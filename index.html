@@ -47,6 +47,8 @@
         playerScore = 0;
         newComputerScore = 0;
         computerScore = 0;
+        displayComputerScore.innerHTML = '0';
+        displayPlayerScore.innerHTML = '0';
     }
     
     function win() {
@@ -137,6 +139,7 @@
                 newComputerScore = 0;
                 displayPlayerScore.textContent = `Player score: 0`;
                 displayComputerScore.textContent = `Player score: 0`;
+                resetScores();
             } else if (rounds = 0) {
                 playerScore = 0;
                 computerScore = 0;
