@@ -100,16 +100,19 @@ turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
 
 let rounds = 0;
+const roundCounter = document.createElement('p');
+function updateRoundCounter() {
+  roundCounter.innerHTML = `Round: ${rounds}`;
+}
+roundCounter.classList.add('p');
+scoreBoard.appendChild(roundCounter);
 function playRound() {
-  ++rounds;
-  const roundCounter = document.createElement('p');
-  roundCounter.classList.add('p');
-  roundCounter.textContent = `Round: ${rounds}`;
-  scoreBoard.appendChild(roundCounter);
   let loop = function () {
-    if (rounds < 3) { 
+    ++rounds;
+    updateRoundCounter();
+    if (rounds <= 3) { 
       console.log("play again");
-    } else if (rounds = 3) {
+    } else if (rounds = 4) {
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
       //gameOverAlert.addEventListener(, resetScores());
       //onsole.log(`Player score: ${playerScore}`);
