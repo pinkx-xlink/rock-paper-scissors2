@@ -55,4 +55,8 @@ rock img source: https://th.bing.com/th/id/R.9478ee9836ff0a78b241b99ba30aaa72?ri
 
 scissors img source: https://www.pinclipart.com/picdir/middle/562-5621754_orange-scissors-png-image-download-scissors-transparent-background.png
 
-
+4/28/24
+I'm making minor CSS tweaks and troubleshooting some minor bugs now that I have had some time apart from this project.
+To fix:
+- score from 3rd round carries over on the scoreboard after a new game is started
+- clicks from outside of the rock, paper, and scissors buttons are being counted as a turn 
