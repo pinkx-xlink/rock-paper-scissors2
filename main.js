@@ -69,10 +69,10 @@ function displayGameOverScreen() {
   playAgainButton.setAttribute('id', 'play-again-button');
   playAgainButton.innerHTML = 'Play Again?';
   gameSummary.appendChild(playAgainButton);
-  playAgainButton.addEventListener('click', () => {
+  playAgainButton.addEventListener('click', function playAgain(){
     document.body.removeChild(gameSummary);
     playRound();
-  })
+  });
 }
     
 let newPlayerScore;
