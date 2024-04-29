@@ -7,21 +7,30 @@ const scoreBoard = document.querySelector("#scoreBoard");
 const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
-rock.addEventListener("click", getPlayerSelection);
+//rock.addEventListener("click", getPlayerSelection);
+rock.addEventListener("click", () => {
+    playerSelection = "rock";
+})
 rock.classList.add('player-options-buttons');
 rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
 options.appendChild(rock);
 
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
-paper.addEventListener("click", getPlayerSelection);
+//paper.addEventListener("click", getPlayerSelection);
+paper.addEventListener("click", () => {
+    playerSelection = "paper";
+})
 paper.classList.add('player-options-buttons');
 paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
 options.appendChild(paper);
 
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
-scissors.addEventListener("click", getPlayerSelection);
+//scissors.addEventListener("click", getPlayerSelection);
+scissors.addEventListener("click", () => {
+    playerSelection = "scissors";
+})
 scissors.classList.add('player-options-buttons');
 scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
 options.appendChild(scissors);
@@ -92,14 +101,14 @@ function lose() {
 const turn = document.querySelector("#turn");
 turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
-function getPlayerSelection() {
-  console.log(`Player chose ${this.name}`);
-  const playerChose = document.createElement('p');
-  playerChose.classList.add('p');
-  playerChose.textContent = `Player chose: ${this.name}`;
-  playerSelection = this.name;
-  return playerSelection;
-}
+// function getPlayerSelection() {
+//   console.log(`Player chose ${this.name}`);
+//   const playerChose = document.createElement('p');
+//   playerChose.classList.add('p');
+//   playerChose.textContent = `Player chose: ${this.name}`;
+//   playerSelection = this.name;
+//   return playerSelection;
+// }
 
 let rounds = 0;
 function playRound() {
@@ -156,22 +165,22 @@ function playRound() {
   if (rounds > 3) {
                 
   }
-  if ((playerSelection) == "rock" && computerSelection == "scissors") {
+  if ((playerSelection) === "rock" && computerSelection == "scissors") {
     return win();
     displayWinner();
-  } else if ((playerSelection) == "paper" && computerSelection == "rock") {
+  } else if ((playerSelection) === "paper" && computerSelection == "rock") {
     return win();
     displayWinner();
-  } else if ((playerSelection) == "scissors" && computerSelection == "paper") {
+  } else if ((playerSelection) === "scissors" && computerSelection == "paper") {
     return win();
     displayWinner();
-  } else if ((playerSelection) == "scissors" && computerSelection == "rock") {
+  } else if ((playerSelection) === "scissors" && computerSelection == "rock") {
     return lose();
     displayWinner();
-  } else if ((playerSelection) == "rock" && computerSelection == "paper") {
+  } else if ((playerSelection) === "rock" && computerSelection == "paper") {
     return lose();
     displayWinner();
-  } else if ((playerSelection) == "paper" && computerSelection == "scissors") {
+  } else if ((playerSelection) === "paper" && computerSelection == "scissors") {
     return lose();
     displayWinner();
   } else { 
