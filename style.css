@@ -39,7 +39,9 @@ h1 {
     background-color: black;
     width: 100px;
 }
-
+.player-options-buttons:hover {
+    cursor:pointer;
+}
 button {
     min-height: 50px;
     height: 80px;
