@@ -124,7 +124,6 @@ function playRound() {
       newPlayerScore = 0;
       newComputerScore = 0;
       return resetScores();
-      
     } else {
       //gameOverAlert.addEventListener(, resetScores());
       //onsole.log(`Player score: ${playerScore}`);

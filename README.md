@@ -61,3 +61,4 @@ To fix:
 - score from 3rd round carries over on the scoreboard after a new game is started
 - clicks from outside of the rock, paper, and scissors buttons are being counted as a turn 
 - consider wrapping win/lose conditions in a if(rounds < 3) else... statement
+- the game over alert runs before the 3rd round ends and registers on the scoreboard... why is that?
