@@ -13,9 +13,9 @@ computerScoreCount.classList.add('p');
 computerScoreCount.textContent = `Computer's score: ${computerScore}`;
 scoreBoard.appendChild(computerScoreCount);
     
-let winner = document.querySelector("#winner");
-winner.textContent = "And the winner is..."
-winner.innerHTML = `<p>And the winner is.....</p>`;
+let currentRoundResults = document.querySelector("#current-round-results");
+currentRoundResults.textContent = "And the currentRoundResults is..."
+currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
   newPlayerScore = 0;
@@ -32,7 +32,7 @@ function win() {
   let newPlayerScore = (++playerScore);
   //console.log(newPlayerScore);
   playerScoreCount.textContent = `Player's score: ${newPlayerScore}`;
-  winner.innerHTML = `<p> You Win! </p>`;
+  currentRoundResults.innerHTML = `<p> You Win! </p>`;
   return;
 }
 
@@ -42,7 +42,7 @@ function lose() {
   let newComputerScore = (++computerScore);
   //console.log(newComputerScore);
   computerScoreCount.textContent = `Computer's score: ${newComputerScore}`;
-  winner.innerHTML = `<p>You LOST! ):</p>`;
+  currentRoundResults.innerHTML = `<p>You LOST! ):</p>`;
   return;
 }
 
@@ -154,7 +154,7 @@ function playRound() {
     return lose();
     displayWinner();
   } else { 
-    winner.innerHTML = `<p>it's a tie :p</p>`;
+    currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
     console.log("TIE!");
   }; 
 }; 

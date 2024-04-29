@@ -18,7 +18,7 @@ h1 {
     font-family: Silkscreen, sans-serif;
 }
 
-#winner {
+#current-round-results {
     color: orange;
     display: flex;
     justify-content: center;
