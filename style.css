@@ -79,3 +79,7 @@ button:hover {
     font-weight: bolder;
     font-size: larger;
 }
+
+#game-summary {
+    background-color: green;
+}
