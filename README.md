@@ -60,3 +60,4 @@ I'm making minor CSS tweaks and troubleshooting some minor bugs now that I have 
 To fix:
 - score from 3rd round carries over on the scoreboard after a new game is started
 - clicks from outside of the rock, paper, and scissors buttons are being counted as a turn 
+- consider wrapping win/lose conditions in a if(rounds < 3) else... statement

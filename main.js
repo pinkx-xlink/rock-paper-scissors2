@@ -160,8 +160,6 @@ function playRound() {
             <p>Player chose ${playerSelection}
             <p>Computer chose ${computerSelection}`;
   if (rounds > 3) {
-                
-  }
   if ((playerSelection) === "rock" && computerSelection == "scissors") {
     return win();
     displayWinner();
@@ -184,4 +182,5 @@ function playRound() {
     currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
     console.log("TIE!");
   }; 
+  };
 }; 
