@@ -108,14 +108,16 @@ roundCounter.classList.add('p');
 scoreBoard.appendChild(roundCounter);
 function playRound() {
   let loop = function () {
-    ++rounds;
+    
     updateRoundCounter();
-    if (rounds < 3) { 
+    if (rounds <= 2) { 
+        ++rounds;
       console.log("play again");
     } else if (rounds = 3) {
+      
       console.log('THE END');
-      playerScoreCount.textContent = `Player score: 0`;
-      computerScoreCount.textContent = `Player score: 0`;
+      playerScoreCount.innerHTML = `Player score: 0`;
+      computerScoreCount.innerHTML = `Player score: 0`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
       rounds = 0;
