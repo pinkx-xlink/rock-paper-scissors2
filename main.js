@@ -7,7 +7,6 @@ const scoreBoard = document.querySelector("#scoreBoard");
 const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
-//rock.addEventListener("click", getPlayerSelection);
 rock.addEventListener("click", () => {
     playerSelection = "rock";
 })
@@ -17,7 +16,6 @@ options.appendChild(rock);
 
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
-//paper.addEventListener("click", getPlayerSelection);
 paper.addEventListener("click", () => {
     playerSelection = "paper";
 })
@@ -27,7 +25,6 @@ options.appendChild(paper);
 
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
-//scissors.addEventListener("click", getPlayerSelection);
 scissors.addEventListener("click", () => {
     playerSelection = "scissors";
 })
