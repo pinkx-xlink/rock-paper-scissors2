@@ -1,13 +1,12 @@
 const options = document.querySelector("#options");
 options.addEventListener("click", playRound);
 const scoreBoard = document.querySelector("#scoreBoard");
-
+// create variables to keep track of player scores
 let playerScore = 0;
 playerScoreCount = document.createElement('p');
 playerScoreCount.classList.add('p');
 playerScoreCount.textContent = `Player score: ${playerScore}`;
 scoreBoard.appendChild(playerScoreCount);
-    
 let computerScore = 0;
 computerScoreCount = document.createElement('p');
 computerScoreCount.classList.add('p');
@@ -47,11 +46,11 @@ function lose() {
   return;
 }
 
+// create the variables for rock, paper, and scissors
 const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", getPlayerSelection);
-    
 rock.classList.add('button');
 rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
 options.appendChild(rock);
@@ -67,15 +66,14 @@ const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", getPlayerSelection);
 scissors.classList.add('button');
-scissors.innerHTML = `
-    <image src="./img/scissors.png" height="55px" />`;
-options.appendChild(scissors);  
-    
+scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
+options.appendChild(scissors);
+
+
 const turn = document.querySelector("#turn");
-turn.innerHTML = `<p></p>`;
+turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
 function getPlayerSelection() {
-        
   console.log(`Player chose ${this.name}`);
   const playerChose = document.createElement('p');
   playerChose.classList.add('p');
