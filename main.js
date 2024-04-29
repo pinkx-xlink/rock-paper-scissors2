@@ -102,10 +102,10 @@ let playerSelection;
 let rounds = 0;
 function playRound() {
   ++rounds;
-  // const roundCounter = document.createElement('p');
-  // roundCounter.classList.add('p');
-  // roundCounter.innerHTML = `<p>Round: ${rounds}</p>`;
-  // scoreBoard.appendChild(roundCounter);
+  const roundCounter = document.createElement('p');
+  roundCounter.classList.add('p');
+  roundCounter.textContent = `Round: ${rounds}`;
+  scoreBoard.appendChild(roundCounter);
   let loop = function () {
     if (rounds < 3) { 
       console.log("play again");
