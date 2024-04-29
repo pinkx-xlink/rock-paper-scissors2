@@ -1,6 +1,32 @@
 const options = document.querySelector("#options");
 options.addEventListener("click", playRound);
 const scoreBoard = document.querySelector("#scoreBoard");
+
+
+// create the variables for rock, paper, and scissors
+const rock = document.createElement('button');
+rock.setAttribute('name', 'rock');
+rock.setAttribute('id', 'rock');
+rock.addEventListener("click", getPlayerSelection);
+rock.classList.add('button');
+rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
+options.appendChild(rock);
+
+const paper = document.createElement('button');
+paper.setAttribute('name', 'paper');
+paper.addEventListener("click", getPlayerSelection);
+paper.classList.add('button');
+paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
+options.appendChild(paper);
+
+const scissors = document.createElement('button');
+scissors.setAttribute('name', 'scissors');
+scissors.addEventListener("click", getPlayerSelection);
+scissors.classList.add('button');
+scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
+options.appendChild(scissors);
+
+
 // create variables to keep track of player scores
 let playerScore = 0;
 playerScoreCount = document.createElement('p');
@@ -27,7 +53,7 @@ function resetScores() {
 }
 
 function displayGameOverScreen() {
-  document.body.innerHTML = "";
+  //document.body.innerHTML = "";
   const gameSummary = document.createElement('div');
   gameSummary.setAttribute('id', 'game-summary');
   gameSummary.innerHTML = 'game over nerd';
@@ -37,6 +63,10 @@ function displayGameOverScreen() {
   playAgainButton.setAttribute('id', 'play-again-button');
   playAgainButton.innerHTML = 'Play Again?';
   gameSummary.appendChild(playAgainButton);
+  playAgainButton.addEventListener('click', () => {
+    document.body.removeChild(gameSummary);
+    playRound();
+  })
 }
     
 let newPlayerScore;
@@ -57,29 +87,6 @@ function lose() {
   currentRoundResults.innerHTML = `<p>You LOST! ):</p>`;
   return;
 }
-
-// create the variables for rock, paper, and scissors
-const rock = document.createElement('button');
-rock.setAttribute('name', 'rock');
-rock.setAttribute('id', 'rock');
-rock.addEventListener("click", getPlayerSelection);
-rock.classList.add('button');
-rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
-options.appendChild(rock);
-
-const paper = document.createElement('button');
-paper.setAttribute('name', 'paper');
-paper.addEventListener("click", getPlayerSelection);
-paper.classList.add('button');
-paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
-options.appendChild(paper);
-
-const scissors = document.createElement('button');
-scissors.setAttribute('name', 'scissors');
-scissors.addEventListener("click", getPlayerSelection);
-scissors.classList.add('button');
-scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
-options.appendChild(scissors);
 
 
 const turn = document.querySelector("#turn");
