@@ -25,6 +25,10 @@ function resetScores() {
   computerScoreCount.innerHTML = '0';
   playerScoreCount.innerHTML = '0';
 }
+
+function displayGameOverScreen() {
+  document.body.innerHTML = "GAME OVER";
+}
     
 let newPlayerScore;
 function win() {
@@ -35,7 +39,6 @@ function win() {
   currentRoundResults.innerHTML = `<p> You Win! </p>`;
   return;
 }
-
 let newComputerScore;
 function lose() {
   console.log("you lose lol");
@@ -104,6 +107,7 @@ function playRound() {
       newComputerScore = 0;
       playerScoreCount.textContent = `Player score: 0`;
       computerScoreCount.textContent = `Player score: 0`;
+      displayGameOverScreen();
       return resetScores();
     } else if (rounds = 0) {
       playerScore = 0;
@@ -116,6 +120,7 @@ function playRound() {
     }
   };
   loop();
+  
 
   console.log(rounds);
   function getComputerChoice() {
