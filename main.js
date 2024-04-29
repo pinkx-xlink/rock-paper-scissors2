@@ -98,14 +98,6 @@ function lose() {
 const turn = document.querySelector("#turn");
 turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
-// function getPlayerSelection() {
-//   console.log(`Player chose ${this.name}`);
-//   const playerChose = document.createElement('p');
-//   playerChose.classList.add('p');
-//   playerChose.textContent = `Player chose: ${this.name}`;
-//   playerSelection = this.name;
-//   return playerSelection;
-// }
 
 let rounds = 0;
 function playRound() {
