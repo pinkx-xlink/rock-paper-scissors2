@@ -8,21 +8,21 @@ const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", getPlayerSelection);
-rock.classList.add('button');
+rock.classList.add('player-options-buttons');
 rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
 options.appendChild(rock);
 
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
 paper.addEventListener("click", getPlayerSelection);
-paper.classList.add('button');
+paper.classList.add('player-options-buttons');
 paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
 options.appendChild(paper);
 
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", getPlayerSelection);
-scissors.classList.add('button');
+scissors.classList.add('player-options-buttons');
 scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
 options.appendChild(scissors);
 
