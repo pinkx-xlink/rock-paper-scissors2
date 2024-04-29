@@ -110,34 +110,28 @@ function playRound() {
   let loop = function () {
     ++rounds;
     updateRoundCounter();
-    if (rounds <= 3) { 
+    if (rounds < 3) { 
       console.log("play again");
-    } else if (rounds = 4) {
+    } else if (rounds = 3) {
+      console.log('THE END');
+      playerScoreCount.textContent = `Player score: 0`;
+      computerScoreCount.textContent = `Player score: 0`;
+      displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
-      //gameOverAlert.addEventListener(, resetScores());
-      //onsole.log(`Player score: ${playerScore}`);
-      //console.log(`Computer score: ${computerScore}`);
       rounds = 0;
       playerScore = 0;
       computerScore = 0;
       newPlayerScore = 0;
       newComputerScore = 0;
-      playerScoreCount.textContent = `Player score: 0`;
-      computerScoreCount.textContent = `Player score: 0`;
-      displayGameOverScreen();
       return resetScores();
-    } else if (rounds = 0) {
-      playerScore = 0;
-      computerScore = 0;
-      newPlayerScore = 0;
-      newComputerScore = 0;
-      playerScoreCount.textContent = `Player score: 0`;
-      computerScoreCount.textContent = `Player score: 0`;
-      return resetScores();
-    }
+      
+    } else {
+      //gameOverAlert.addEventListener(, resetScores());
+      //onsole.log(`Player score: ${playerScore}`);
+      //console.log(`Computer score: ${computerScore}`);
+    } 
   };
   loop();
-  
 
   console.log(rounds);
   function getComputerChoice() {
@@ -154,7 +148,7 @@ function playRound() {
   turn.innerHTML = `
             <p>Player chose ${playerSelection}
             <p>Computer chose ${computerSelection}`;
-  if (rounds > 3) {
+  if (rounds < 3) {
   if ((playerSelection) === "rock" && computerSelection == "scissors") {
     return win();
     displayWinner();
