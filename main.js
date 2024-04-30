@@ -9,6 +9,7 @@ rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", () => {
     playerSelection = "rock";
+    updateRoundCounter();
 })
 rock.classList.add('player-options-buttons');
 rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
@@ -18,6 +19,7 @@ const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
 paper.addEventListener("click", () => {
     playerSelection = "paper";
+    updateRoundCounter();
 })
 paper.classList.add('player-options-buttons');
 paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
@@ -27,6 +29,7 @@ const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", () => {
     playerSelection = "scissors";
+    updateRoundCounter();
 })
 scissors.classList.add('player-options-buttons');
 scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
@@ -107,14 +110,13 @@ function updateRoundCounter() {
 roundCounter.classList.add('p');
 scoreBoard.appendChild(roundCounter);
 function playRound() {
+    
   let loop = function () {
     
-    updateRoundCounter();
     if (rounds <= 2) { 
         ++rounds;
       console.log("play again");
-    } else if (rounds = 3) {
-      
+    } else if (rounds === 3) {
       console.log('THE END');
       playerScoreCount.innerHTML = `Player score: 0`;
       computerScoreCount.innerHTML = `Player score: 0`;
