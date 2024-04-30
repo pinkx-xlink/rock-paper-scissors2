@@ -104,15 +104,15 @@ let playerSelection;
 
 let rounds = 0;
 const roundCounter = document.createElement('p');
+roundCounter.classList.add('p');
+roundCounter.innerHTML = `Round: `
+scoreBoard.appendChild(roundCounter);
 function updateRoundCounter() {
   roundCounter.innerHTML = `Round: ${rounds}`;
 }
-roundCounter.classList.add('p');
-scoreBoard.appendChild(roundCounter);
+
 function playRound() {
-    
   let loop = function () {
-    
     if (rounds <= 2) { 
         ++rounds;
       console.log("play again");
@@ -122,11 +122,6 @@ function playRound() {
       computerScoreCount.innerHTML = `Player score: 0`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
-      rounds = 0;
-      playerScore = 0;
-      computerScore = 0;
-      newPlayerScore = 0;
-      newComputerScore = 0;
       return resetScores();
     } else {
       //gameOverAlert.addEventListener(, resetScores());
