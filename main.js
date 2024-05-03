@@ -102,7 +102,7 @@ const turn = document.querySelector("#turn");
 turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
 
-let rounds = 1;
+let rounds = 1; 
 const roundCounter = document.createElement('p');
 roundCounter.classList.add('p');
 roundCounter.innerHTML = `Round: `
@@ -113,14 +113,14 @@ function updateRoundCounter() {
 
 function playRound() {
   let loop = function () {
-    if (rounds <= 2) { 
+    if (rounds < 3) {
         ++rounds;
       console.log("play again");
     } else if (rounds === 3) {
       console.log('THE END');
-      playerScoreCount.innerHTML = `Player score: 0`;
-      computerScoreCount.innerHTML = `Player score: 0`;
-      roundCounter.innerHTML = `Round: 0`;
+      //playerScoreCount.innerHTML = `Player score: 0`;
+      //computerScoreCount.innerHTML = `Player score: 0`;
+      roundCounter.innerHTML = `Round:`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
       rounds = 0;
