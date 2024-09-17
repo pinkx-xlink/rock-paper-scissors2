@@ -120,22 +120,11 @@ function playRound() {
       console.log("play again");
     } else if (rounds === 3) {
       console.log('THE END');
-      //playerScoreCount.innerHTML = `Player score: 0`;
-      //computerScoreCount.innerHTML = `Player score: 0`;
       roundCounter.innerHTML = `GAME OVER`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
-      // rounds = 0;
-      // playerScore = 0;
-      // computerScore = 0;
-      // newPlayerScore = 0;
-      // newComputerScore = 0;
       return resetScores();
     } else {
-   
-      //gameOverAlert.addEventListener(, resetScores());
-      //onsole.log(`Player score: ${playerScore}`);
-      //console.log(`Computer score: ${computerScore}`);
     } 
   };
   loop();
