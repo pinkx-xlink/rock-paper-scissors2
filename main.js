@@ -57,8 +57,8 @@ function resetScores() {
   playerScore = 0;
   newComputerScore = 0;
   computerScore = 0;
-  computerScoreCount.innerHTML = '0';
-  playerScoreCount.innerHTML = '0';
+  computerScoreCount = '0';
+  playerScoreCount = '0';
 }
 
 function displayGameOverScreen() {
@@ -75,6 +75,7 @@ function displayGameOverScreen() {
   playAgainButton.addEventListener('click', function playAgain(){
     document.body.removeChild(gameSummary);
     playRound();
+    resetScores();
   });
 }
     
@@ -130,6 +131,7 @@ function playRound() {
       newComputerScore = 0;
       //return resetScores();
     } else {
+   
       //gameOverAlert.addEventListener(, resetScores());
       //onsole.log(`Player score: ${playerScore}`);
       //console.log(`Computer score: ${computerScore}`);
