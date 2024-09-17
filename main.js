@@ -53,6 +53,7 @@ currentRoundResults.textContent = "And the currentRoundResults is..."
 currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
+  rounds = 0;
   newPlayerScore = 0;
   playerScore = 0;
   newComputerScore = 0;
@@ -124,12 +125,12 @@ function playRound() {
       roundCounter.innerHTML = `GAME OVER`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
-      rounds = 0;
-      playerScore = 0;
-      computerScore = 0;
-      newPlayerScore = 0;
-      newComputerScore = 0;
-      //return resetScores();
+      // rounds = 0;
+      // playerScore = 0;
+      // computerScore = 0;
+      // newPlayerScore = 0;
+      // newComputerScore = 0;
+      return resetScores();
     } else {
    
       //gameOverAlert.addEventListener(, resetScores());
