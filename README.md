@@ -62,3 +62,7 @@ To fix:
 - clicks from outside of the rock, paper, and scissors buttons are being counted as a turn 
 - consider wrapping win/lose conditions in a if(rounds < 3) else... statement
 - the game over alert runs before the 3rd round ends and registers on the scoreboard... why is that?
+
+9/17/24
+Today I am refactoring this project.
+There are multiple things about this project that bother me, including the overall messy code (since this was an early on project in my JavaScript journey), tightly coupled functions, and the bugs with the score. The most bothersome issue (which I tried and failed at fixing a few months back) has been the scoreboard adding an additional point for either the computer or the player's score. To fix this, I've refactored the resetScore() function to reset the rounds and the <p> element that displays player and computer scores; set the default rounds to 0 instead of 1; decoupled various poorly written functions; created a function that gets the player's choice by button ID, and created an async function that waits for the player selection before getting the randomized computer choice, eliminating the weird extra-point situation. 
