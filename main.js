@@ -1,7 +1,7 @@
 const options = document.querySelector("#options");
 options.addEventListener("click", playRound);
 const scoreBoard = document.querySelector("#scoreBoard");
-
+const scores = document.getElementById('scores');
 function getPlayerChoice(buttonId) {
   if (buttonId === 'rock') {
     console.log('ROCK');
@@ -53,12 +53,12 @@ let playerScore = 0;
 playerScoreCount = document.createElement('p');
 playerScoreCount.classList.add('p');
 playerScoreCount.textContent = `Player score: ${playerScore}`;
-scoreBoard.appendChild(playerScoreCount);
+scores.appendChild(playerScoreCount);
 let computerScore = 0;
 computerScoreCount = document.createElement('p');
 computerScoreCount.classList.add('p');
 computerScoreCount.textContent = `Computer's score: ${computerScore}`;
-scoreBoard.appendChild(computerScoreCount);
+scores.appendChild(computerScoreCount);
     
 let currentRoundResults = document.querySelector("#current-round-results");
 currentRoundResults.textContent = "And the currentRoundResults is..."
@@ -120,7 +120,7 @@ let rounds = 0;
 const roundCounter = document.createElement('p');
 roundCounter.classList.add('p');
 roundCounter.innerHTML = `Round: `
-scoreBoard.appendChild(roundCounter);
+scores.appendChild(roundCounter);
 function updateRoundCounter() {
   roundCounter.innerHTML = `Round: ${rounds + 1}`;
 }
