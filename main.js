@@ -108,7 +108,7 @@ roundCounter.classList.add('p');
 roundCounter.innerHTML = `Round: `
 scoreBoard.appendChild(roundCounter);
 function updateRoundCounter() {
-  roundCounter.innerHTML = `Round: ${rounds}`;
+  roundCounter.innerHTML = `Round: ${rounds + 1}`;
 }
 
 function playRound() {
