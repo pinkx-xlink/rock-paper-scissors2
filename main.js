@@ -102,7 +102,7 @@ const turn = document.querySelector("#turn");
 turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
 
-let rounds = 1; 
+let rounds = 0; 
 const roundCounter = document.createElement('p');
 roundCounter.classList.add('p');
 roundCounter.innerHTML = `Round: `
