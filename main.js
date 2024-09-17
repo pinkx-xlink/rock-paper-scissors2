@@ -141,7 +141,7 @@ function playRound() {
   };
   loop();
 
-  console.log(rounds);
+  console.log(`Round: ${rounds}`);
   async function getComputerChoice() {
     await getPlayerChoice();
     return array[Math.floor(Math.random() * array.length)];
