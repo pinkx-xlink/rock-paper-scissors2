@@ -143,7 +143,7 @@ function playRound() {
 
   console.log(rounds);
   async function getComputerChoice() {
-    await updateRoundCounter();
+    await getPlayerChoice();
     return array[Math.floor(Math.random() * array.length)];
   }
   const array = ["rock", "paper", "scissors"];
