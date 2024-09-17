@@ -2,13 +2,25 @@ const options = document.querySelector("#options");
 options.addEventListener("click", playRound);
 const scoreBoard = document.querySelector("#scoreBoard");
 
-
+function getPlayerChoice(buttonId) {
+  if (buttonId === 'rock') {
+    console.log('ROCK');
+    playerSelection = 'rock';
+  } else if (buttonId === 'paper') {
+    console.log('player chose PAPER');
+    playerSelection = 'paper';
+  } else if (buttonId === 'scissors') {
+    console.log('player chose SCISSORS');
+    playerSelection = 'scissors';
+  }
+  console.log(`player chose ${playerSelection}`);
+}
 // create the variables for rock, paper, and scissors
 const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", () => {
-    playerSelection = "rock";
+    getPlayerChoice('rock');
     updateRoundCounter();
 })
 rock.classList.add('player-options-buttons');
@@ -18,7 +30,7 @@ options.appendChild(rock);
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
 paper.addEventListener("click", () => {
-    playerSelection = "paper";
+    getPlayerChoice('paper');
     updateRoundCounter();
 })
 paper.classList.add('player-options-buttons');
@@ -28,7 +40,7 @@ options.appendChild(paper);
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", () => {
-    playerSelection = "scissors";
+    getPlayerChoice('scissors');
     updateRoundCounter();
 })
 scissors.classList.add('player-options-buttons');
