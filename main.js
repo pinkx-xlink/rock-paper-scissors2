@@ -120,7 +120,7 @@ function playRound() {
       console.log('THE END');
       //playerScoreCount.innerHTML = `Player score: 0`;
       //computerScoreCount.innerHTML = `Player score: 0`;
-      roundCounter.innerHTML = `Round:`;
+      roundCounter.innerHTML = `GAME OVER`;
       displayGameOverScreen();
       const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
       rounds = 0;
@@ -150,8 +150,8 @@ function playRound() {
   //randomly choose 1
   //use return, not console.log
   turn.innerHTML = `
-            <p>Player chose ${playerSelection}
-            <p>Computer chose ${computerSelection}`;
+            <p>Player chose ${playerSelection}</p>
+            <p>Computer chose ${computerSelection}</p>`;
   if (rounds < 3) {
   if ((playerSelection) === "rock" && computerSelection == "scissors") {
     return win();
