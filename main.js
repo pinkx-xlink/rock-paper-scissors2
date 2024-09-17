@@ -142,6 +142,7 @@ function playRound() {
   loop();
 
   console.log(`Round: ${rounds}`);
+  // TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
   async function getComputerChoice() {
     await getPlayerChoice();
     return array[Math.floor(Math.random() * array.length)];
