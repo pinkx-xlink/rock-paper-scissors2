@@ -50,6 +50,9 @@ scissors.classList.add('player-options-buttons');
 scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
 options.appendChild(scissors);
 
+// This is where we see which player chooses what
+const turn = document.querySelector("#turn");
+turn.innerHTML = `<p>make your move...</p>`;
 
 // create variables to keep track of player scores
 let playerScore = 0;
@@ -77,6 +80,7 @@ function resetScores() {
   computerScoreCount.textContent = 'Computer: 0';
   playerScoreCount.textContent = 'Player: 0';
   roundCounter.textContent = 'Round: ';
+  turn.innerHTML = '';
 }
 
 function displayGameOverScreen() {
@@ -113,8 +117,7 @@ function lose() {
 }
 
 
-const turn = document.querySelector("#turn");
-turn.innerHTML = `<p>make your move...</p>`;
+
 let playerSelection;
 
 let rounds = 0; 
@@ -132,10 +135,10 @@ async function playRound() {
       console.log("play again");
     } else {
       setTimeout(() => {
-        console.log('reset that shit after 1 second');
+        console.log('reset that shit after 2 second');
         displayGameOverScreen();
         return resetScores();
-      }, 1000);
+      }, 2000);
       console.log('THE END');
       roundCounter.innerHTML = `GAME OVER`;
     }
