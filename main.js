@@ -75,13 +75,14 @@ function displayGameOverScreen() {
   //document.body.innerHTML = "";
   const gameSummary = document.getElementById('game-summary');
   gameSummary.innerHTML = 'game over nerd';
-  
+  gameSummary.hidden = false;
   const playAgainButton = document.createElement('button');
   playAgainButton.setAttribute('id', 'play-again-button');
   playAgainButton.innerHTML = 'Play Again?';
   gameSummary.appendChild(playAgainButton);
   playAgainButton.addEventListener('click', function playAgain(){
     document.body.removeChild(gameSummary);
+    gameSummary.hidden = true;
     resetScores();
   });
 }
