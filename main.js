@@ -73,10 +73,8 @@ function resetScores() {
 
 function displayGameOverScreen() {
   //document.body.innerHTML = "";
-  const gameSummary = document.createElement('div');
-  gameSummary.setAttribute('id', 'game-summary');
+  const gameSummary = document.getElementById('game-summary');
   gameSummary.innerHTML = 'game over nerd';
-  document.body.appendChild(gameSummary);
   
   const playAgainButton = document.createElement('button');
   playAgainButton.setAttribute('id', 'play-again-button');
