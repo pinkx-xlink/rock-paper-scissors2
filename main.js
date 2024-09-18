@@ -61,8 +61,8 @@ computerScoreCount.textContent = `Computer's score: ${computerScore}`;
 scores.appendChild(computerScoreCount);
     
 let currentRoundResults = document.querySelector("#current-round-results");
-currentRoundResults.textContent = "And the currentRoundResults is..."
-currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
+currentRoundResults.textContent = "And the current round result is..."
+// currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
   rounds = 0;
@@ -144,10 +144,11 @@ function playRound() {
   console.log(`Round: ${rounds}`);
   // TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
   async function getComputerChoice() {
-    await getPlayerChoice();
+    await getPlayerChoice()
+    const array = ["rock", "paper", "scissors"];
     return array[Math.floor(Math.random() * array.length)];
   }
-  const array = ["rock", "paper", "scissors"];
+  
   const computerSelection = getComputerChoice();
   const computerChose = document.createElement('p');
   computerChose.classList.add('p');
