@@ -67,8 +67,8 @@ function resetScores() {
   playerScore = 0;
   newComputerScore = 0;
   computerScore = 0;
-  computerScoreCount.textContent = '0';
-  playerScoreCount.textContent = '0';
+  computerScoreCount.textContent = 'Computer: 0';
+  playerScoreCount.textContent = 'Player: 0';
 }
 
 function displayGameOverScreen() {

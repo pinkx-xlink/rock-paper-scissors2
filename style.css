@@ -89,6 +89,7 @@ button:hover {
 #scores {
     display: flex;
     justify-content: space-between;
+    width: 80%;
 }
 
 #game-summary {
