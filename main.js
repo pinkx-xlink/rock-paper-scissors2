@@ -116,12 +116,10 @@ turn.innerHTML = `<p>make your move...</p>`;
 let playerSelection;
 
 let rounds = 0; 
-const roundCounter = document.createElement('p');
-roundCounter.classList.add('p');
+const roundCounter = document.getElementById('roundcounter');
 roundCounter.innerHTML = `Round: `
-scores.appendChild(roundCounter);
 function updateRoundCounter() {
-  roundCounter.innerHTML = `Round: ${rounds + 1}`;
+  roundCounter.textContent = `Round: ${rounds + 1}`;
 }
 
 async function playRound() {
