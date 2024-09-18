@@ -70,10 +70,11 @@ button:hover {
 #turn {
     color: aliceblue;
     font-weight: bold;
-    font-size: 20px;
-    justify-content: space-evenly;
+    font-size: 15px;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
+    width: 80%;
 }
 
 #scoreBoard {
