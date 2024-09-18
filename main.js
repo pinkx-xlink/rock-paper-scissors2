@@ -4,13 +4,10 @@ const scoreBoard = document.querySelector("#scoreBoard");
 const scores = document.getElementById('scores');
 function getPlayerChoice(buttonId) {
   if (buttonId === 'rock') {
-    console.log('ROCK');
     playerSelection = 'rock';
   } else if (buttonId === 'paper') {
-    console.log('player chose PAPER');
     playerSelection = 'paper';
   } else if (buttonId === 'scissors') {
-    console.log('player chose SCISSORS');
     playerSelection = 'scissors';
   }
   console.log(`player chose ${playerSelection}`);
@@ -154,8 +151,8 @@ async function playRound() {
   console.log(`Computer chose ${computerSelection}`);
 
   turn.innerHTML = `
-            <p>Player chose ${playerSelection}</p>
-            <p>Computer chose ${computerSelection}</p>`;
+    <p>Player chose ${playerSelection}</p>
+    <p>Computer chose ${computerSelection}</p>`;
   if (rounds < 3) {
   if ((playerSelection) === "rock" && computerSelection == "scissors") {
     return win();
