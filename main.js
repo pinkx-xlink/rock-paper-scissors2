@@ -125,10 +125,14 @@ async function playRound() {
       ++rounds;
       console.log("play again");
     } else if (rounds === 3) {
+      setTimeout(() => {
+        console.log('reset that shit after 2 seconds');
+        displayGameOverScreen();
+        return resetScores();
+      }, 2000);
       console.log('THE END');
       roundCounter.innerHTML = `GAME OVER`;
-      displayGameOverScreen();
-      return resetScores();
+      
     } else {
     } 
   };
