@@ -9,6 +9,10 @@
 }
 body {
     background-image: radial-gradient(black, rgb(15, 8, 8));
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 h1 {
@@ -32,8 +36,7 @@ h1 {
     min-height: 200px;
     justify-content: space-evenly;
     align-items: center;
-    border: 3px solid white;
-    border-radius: 4px;
+    border: 2px dotted white;
 }
 .player-options-buttons {
     background-color: black;
@@ -94,8 +97,8 @@ button:hover {
 
 #game-summary {
     background-color: rgba(117, 0, 128, 0.295);
-    height: 500px;
-    width: 500px;
-    padding: 60px;
+    height: 120px;
+    width: 50%;
+    padding: 50px;
     margin: 15px;
 }
