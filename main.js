@@ -75,10 +75,7 @@ function displayGameOverScreen() {
   //document.body.innerHTML = "";
   const gameSummary = document.getElementById('game-summary');
   document.getElementById('game-summary').hidden = false;
-  const playAgainButton = document.createElement('button');
-  playAgainButton.setAttribute('id', 'play-again-button');
-  playAgainButton.innerHTML = 'Play Again?';
-  gameSummary.appendChild(playAgainButton);
+  const playAgainButton = document.getElementById('play-again-btn');
   playAgainButton.addEventListener('click', function playAgain(){
     gameSummary.hidden = true;
     resetScores();
