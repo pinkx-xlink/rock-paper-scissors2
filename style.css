@@ -32,7 +32,7 @@ h1 {
 #options {
     display: flex;
     flex-direction: row;
-    max-width: 100;
+    width: 500px;
     min-height: 200px;
     justify-content: space-evenly;
     align-items: center;
@@ -87,6 +87,7 @@ button:hover {
     color: aliceblue;
     font-weight: bolder;
     font-size: larger;
+    width: 500px;
 }
 
 #scores {
