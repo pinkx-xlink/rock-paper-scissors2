@@ -49,12 +49,12 @@ options.appendChild(scissors);
 let playerScore = 0;
 playerScoreCount = document.createElement('p');
 playerScoreCount.classList.add('p');
-playerScoreCount.textContent = `Player score: ${playerScore}`;
+playerScoreCount.textContent = `Player: ${playerScore}`;
 scores.appendChild(playerScoreCount);
 let computerScore = 0;
 computerScoreCount = document.createElement('p');
 computerScoreCount.classList.add('p');
-computerScoreCount.textContent = `Computer's score: ${computerScore}`;
+computerScoreCount.textContent = `Computer: ${computerScore}`;
 scores.appendChild(computerScoreCount);
     
 let currentRoundResults = document.querySelector("#current-round-results");
