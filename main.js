@@ -142,7 +142,7 @@ async function playRound() {
   console.log(`Round: ${rounds}`);
   // TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
   function getComputerChoice() {
-    
+    // randomly choose 1 option which will serve as the computer's choice
     const array = ["rock", "paper", "scissors"];
     return array[Math.floor(Math.random() * array.length)];
   }
@@ -152,8 +152,7 @@ async function playRound() {
   computerChose.classList.add('p');
   computerChose.textContent = `Computer chose: ${computerSelection}`;
   console.log(`Computer chose ${computerSelection}`);
-  //randomly choose 1
-  //use return, not console.log
+
   turn.innerHTML = `
             <p>Player chose ${playerSelection}</p>
             <p>Computer chose ${computerSelection}</p>`;

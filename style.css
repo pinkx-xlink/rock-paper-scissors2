@@ -86,6 +86,10 @@ button:hover {
     font-size: larger;
 }
 
+#scores {
+    display: flex;
+    justify-content: space-between;
+}
 
 #game-summary {
     background-color: rgba(0, 128, 0, 0.733);
