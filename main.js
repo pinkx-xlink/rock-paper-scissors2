@@ -125,7 +125,8 @@ function updateRoundCounter() {
   roundCounter.innerHTML = `Round: ${rounds + 1}`;
 }
 
-function playRound() {
+async function playRound() {
+  await getPlayerChoice()
   let loop = function () {
     if (rounds < 3) {
         ++rounds;
@@ -143,8 +144,8 @@ function playRound() {
 
   console.log(`Round: ${rounds}`);
   // TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
-  async function getComputerChoice() {
-    await getPlayerChoice()
+  function getComputerChoice() {
+    
     const array = ["rock", "paper", "scissors"];
     return array[Math.floor(Math.random() * array.length)];
   }
