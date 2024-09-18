@@ -87,7 +87,6 @@ function displayGameOverScreen() {
   gameSummary.appendChild(playAgainButton);
   playAgainButton.addEventListener('click', function playAgain(){
     document.body.removeChild(gameSummary);
-    playRound();
     resetScores();
   });
 }
