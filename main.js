@@ -92,7 +92,6 @@ let newPlayerScore;
 function win() {
   console.log("You win!");
   let newPlayerScore = (++playerScore);
-  //console.log(newPlayerScore);
   playerScoreCount.textContent = `Player's score: ${newPlayerScore}`;
   currentRoundResults.innerHTML = `<p> You Win! </p>`;
   return;
@@ -101,7 +100,6 @@ let newComputerScore;
 function lose() {
   console.log("you lose lol");
   let newComputerScore = (++computerScore);
-  //console.log(newComputerScore);
   computerScoreCount.textContent = `Computer's score: ${newComputerScore}`;
   currentRoundResults.innerHTML = `<p>You LOST! ):</p>`;
   return;
