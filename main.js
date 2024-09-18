@@ -17,8 +17,8 @@ const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", () => {
-    getPlayerChoice('rock');
-    updateRoundCounter();
+  getPlayerChoice('rock');
+  updateRoundCounter();
 })
 rock.classList.add('player-options-buttons');
 rock.innerHTML = `<image src="/img/rock.png" height="55px"/> `;
@@ -27,8 +27,8 @@ options.appendChild(rock);
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
 paper.addEventListener("click", () => {
-    getPlayerChoice('paper');
-    updateRoundCounter();
+  getPlayerChoice('paper');
+  updateRoundCounter();
 })
 paper.classList.add('player-options-buttons');
 paper.innerHTML = `<image src="./img/paper.png" height="55px"/>`;
@@ -37,8 +37,8 @@ options.appendChild(paper);
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", () => {
-    getPlayerChoice('scissors');
-    updateRoundCounter();
+  getPlayerChoice('scissors');
+  updateRoundCounter();
 })
 scissors.classList.add('player-options-buttons');
 scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
@@ -121,7 +121,7 @@ async function playRound() {
   await getPlayerChoice()
   let loop = function () {
     if (rounds < 3) {
-        ++rounds;
+      ++rounds;
       console.log("play again");
     } else if (rounds === 3) {
       console.log('THE END');
@@ -152,27 +152,27 @@ async function playRound() {
     <p>Player chose ${playerSelection}</p>
     <p>Computer chose ${computerSelection}</p>`;
   if (rounds < 3) {
-  if ((playerSelection) === "rock" && computerSelection == "scissors") {
-    return win();
-    displayWinner();
-  } else if ((playerSelection) === "paper" && computerSelection == "rock") {
-    return win();
-    displayWinner();
-  } else if ((playerSelection) === "scissors" && computerSelection == "paper") {
-    return win();
-    displayWinner();
-  } else if ((playerSelection) === "scissors" && computerSelection == "rock") {
-    return lose();
-    displayWinner();
-  } else if ((playerSelection) === "rock" && computerSelection == "paper") {
-    return lose();
-    displayWinner();
-  } else if ((playerSelection) === "paper" && computerSelection == "scissors") {
-    return lose();
-    displayWinner();
-  } else { 
-    currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
-    console.log("TIE!");
-  }; 
+    if ((playerSelection) === "rock" && computerSelection == "scissors") {
+      return win();
+      displayWinner();
+    } else if ((playerSelection) === "paper" && computerSelection == "rock") {
+      return win();
+      displayWinner();
+    } else if ((playerSelection) === "scissors" && computerSelection == "paper") {
+      return win();
+      displayWinner();
+    } else if ((playerSelection) === "scissors" && computerSelection == "rock") {
+      return lose();
+      displayWinner();
+    } else if ((playerSelection) === "rock" && computerSelection == "paper") {
+      return lose();
+      displayWinner();
+    } else if ((playerSelection) === "paper" && computerSelection == "scissors") {
+      return lose();
+      displayWinner();
+    } else { 
+      currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
+      console.log("TIE!");
+    }; 
   };
 }; 
