@@ -36,7 +36,7 @@ h1 {
     min-height: 200px;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px dotted white;
+    border: 5px ridge white;
 }
 .player-options-buttons {
     background-color: black;
@@ -51,8 +51,7 @@ button {
     min-width: 50px;
     width: 80px;
     background-image: linear-gradient(to bottom left, rgba(128, 0, 128, 0.452), rgba(9, 59, 196, 0.5));
-    border-radius: 5px;
-    border: 2px solid white;
+    border: 5px ridge white;
 }
 button:hover {
     background-image: linear-gradient(to bottom left, rgba(128, 0, 128, 0.692), rgba(9, 59, 196, 0.753));
@@ -83,8 +82,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 3px solid white;
-    border-radius: 4px;
+    border: 5px ridge white;
     color: aliceblue;
     font-weight: bolder;
     font-size: larger;
