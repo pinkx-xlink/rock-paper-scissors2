@@ -17,6 +17,8 @@ const rock = document.createElement('button');
 rock.setAttribute('name', 'rock');
 rock.setAttribute('id', 'rock');
 rock.addEventListener("click", () => {
+  const rockAudio = new Audio('./audio/rock-audio.wav');
+  rockAudio.play();
   getPlayerChoice('rock');
   updateRoundCounter();
 })
@@ -27,6 +29,8 @@ options.appendChild(rock);
 const paper = document.createElement('button');
 paper.setAttribute('name', 'paper');
 paper.addEventListener("click", () => {
+  const paperAudio = new Audio('./audio/paper-audio.wav');
+  paperAudio.play();
   getPlayerChoice('paper');
   updateRoundCounter();
 })
@@ -37,6 +41,8 @@ options.appendChild(paper);
 const scissors = document.createElement('button');
 scissors.setAttribute('name', 'scissors');
 scissors.addEventListener("click", () => {
+  const scissorsAudio = new Audio('./audio/scissors-audio.wav');
+  scissorsAudio.play();
   getPlayerChoice('scissors');
   updateRoundCounter();
 })
