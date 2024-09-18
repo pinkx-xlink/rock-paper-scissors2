@@ -57,6 +57,7 @@ computerScoreCount.classList.add('p');
 computerScoreCount.textContent = `Computer: ${computerScore}`;
 scores.appendChild(computerScoreCount);
     
+
 let currentRoundResults = document.querySelector("#current-round-results");
 currentRoundResults.textContent = "And the current round result is..."
 // currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
