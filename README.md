@@ -66,3 +66,13 @@ To fix:
 9/17/24
 Today I am refactoring this project.
 There are multiple things about this project that bother me, including the overall messy code (since this was an early on project in my JavaScript journey), tightly coupled functions, and the bugs with the score. The most bothersome issue (which I tried and failed at fixing a few months back) has been the scoreboard adding an additional point for either the computer or the player's score. To fix this, I've refactored the resetScore() function to reset the rounds and the <p> element that displays player and computer scores; set the default rounds to 0 instead of 1; decoupled various poorly written functions; created a function that gets the player's choice by button ID, and created an async function that waits for the player selection before getting the randomized computer choice, eliminating the weird extra-point situation. 
+
+9/18/24
+I am finally satisfied with this project. 
+I changed (rounds < 3) to ((rounds + 1) < 3) so that the game ends right after the third round instead of right as the player clicks rock/paper/scissors a fourth time. I'm very happy! That had been the most bothersome and persistent issue and I'm very glad it's gone. 
+I also added a two second delay between the "Game Over" text and the "play again?" screen populating. 
+- Added audio clips for each player option
+- Altered the borders and some font sizes 
+
+I plan on putting some more elbow grease into the CSS design later... maybe. I originally was going for a "retro" design, and while the CSS is basic I feel like I've met my original goal. 
+We'll see!
