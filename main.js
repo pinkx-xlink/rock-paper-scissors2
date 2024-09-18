@@ -122,7 +122,6 @@ async function playRound() {
       console.log('THE END');
       roundCounter.innerHTML = `GAME OVER`;
       displayGameOverScreen();
-      const gameOverAlert = alert(`GAME OVER~ Player score: ${playerScore}~ Computer score: ${computerScore}`);
       return resetScores();
     } else {
     } 
