@@ -161,7 +161,7 @@ async function playRound() {
   turn.innerHTML = `
     <p>Player chose ${playerSelection}</p>
     <p>Computer chose ${computerSelection}</p>`;
-  if (rounds < 3) {
+  if ((rounds + 1) <= 3) {
     if ((playerSelection) === "rock" && computerSelection == "scissors") {
       return win();
       displayWinner();
