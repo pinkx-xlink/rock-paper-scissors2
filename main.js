@@ -47,7 +47,7 @@ scissors.addEventListener("click", () => {
   updateRoundCounter();
 })
 scissors.classList.add('player-options-buttons');
-scissors.innerHTML = `<image src="./img/scissors.png" height="55px" />`;
+scissors.innerHTML = `<image src="./img/scissors.jpg" height="55px" />`;
 options.appendChild(scissors);
 
 // This is where we see which player chooses what
