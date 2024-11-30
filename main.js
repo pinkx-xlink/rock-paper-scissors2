@@ -130,15 +130,14 @@ function updateRoundCounter() {
 async function playRound() {
   await getPlayerChoice()
   let loop = function () {
-    if ((rounds + 1) < 3) {
+    if ((rounds + 1) !== 3) {
       ++rounds;
       console.log("play again");
     } else {
       setTimeout(() => {
         console.log('reset that shit after 2 second');
         displayGameOverScreen();
-        return resetScores();
-      }, 2000);
+      }, 1000);
       console.log('THE END');
       roundCounter.innerHTML = `GAME OVER`;
     }
