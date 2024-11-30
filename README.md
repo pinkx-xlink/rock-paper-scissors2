@@ -53,7 +53,7 @@ paper img source: https://th.bing.com/th/id/R.6949ee86b3ab0fee993f170a72fd2d04?r
 
 rock img source: https://th.bing.com/th/id/R.9478ee9836ff0a78b241b99ba30aaa72?rik=khZ%2bvW%2fwuGQOBA&riu=http%3a%2f%2fpixelartmaker.com%2fart%2fda268f06e621b21.png&ehk=dEYs2jkBmKLTdT6nRtBB3Vs19%2bSIEMg0U8mGPHOSR7g%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
 
-scissors img source: https://www.pinclipart.com/picdir/middle/562-5621754_orange-scissors-png-image-download-scissors-transparent-background.png
+scissors img source: https://pin.it/3CUcTaEln
 
 4/28/24
 I'm making minor CSS tweaks and troubleshooting some minor bugs now that I have had some time apart from this project.
