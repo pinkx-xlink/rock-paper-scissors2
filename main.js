@@ -130,10 +130,12 @@ function updateRoundCounter() {
 async function playRound() {
   await getPlayerChoice()
   let loop = function () {
-    if ((rounds + 1) !== 3) {
+    if ((rounds + 1) <= 3) {
       ++rounds;
       console.log("play again");
-    } else {
+    } else if ((rounds + 1) === 3) {
+      alert('blap');
+    } else if ((rounds + 1) === 4) {
       setTimeout(() => {
         console.log('reset that shit after 2 second');
         displayGameOverScreen();
