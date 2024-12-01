@@ -1,6 +1,13 @@
 # rock-paper-scissors2
 Rock paper scissors second runthrough
 
+![Screenshot of a Rock Paper Scissors Game](./img/round-start-screenshot.png "Rock, Paper, Scissors, Go!")
+
+![Screenshot of a Rock Paper Scissors Game](./img/round-lost-screenshot.png "Rock, Paper, Scissors, Go!")
+
+![Screenshot of a Rock Paper Scissors Game](./img/round-won-screenshot.png "Rock, Paper, Scissors, Go!")
+
+![Screenshot of a Rock Paper Scissors Game](./img/game-over-screenshot.png "Rock, Paper, Scissors, Go!")
 12/7/23: 2 hrs (JavaScipt only) - Built the foundation for the project per the project instructions. 
 I formed a better understanding of creating elements with JavaScript and assigning to them attributes, variables, and functions. I exercised my knowledge of loops, arrays, and variable incrimentors and decrementers.
 
