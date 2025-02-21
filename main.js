@@ -76,7 +76,7 @@ scores.appendChild(computerScoreCount);
     
 
 let currentRoundResults = document.querySelector('#current-round-results');
-currentRoundResults.textContent = 'And the current round result is...'
+currentRoundResults.textContent = 'Who will win...'
 // currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
@@ -124,9 +124,9 @@ function lose() {
 
 let playerSelection;
 
-let rounds = 1; 
+let rounds = 1;
 const roundCounter = document.getElementById('roundcounter');
-roundCounter.innerHTML = 'Round: 1'
+roundCounter.innerHTML = 'Round: 1';
 function updateRoundCounter() {
   roundCounter.textContent = `Round: ${rounds}`;
 }
