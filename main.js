@@ -73,7 +73,6 @@ const computerScoreCount = document.createElement('p');
 computerScoreCount.classList.add('p');
 computerScoreCount.textContent = `Computer: ${computerScore}`;
 scores.appendChild(computerScoreCount);
-    
 
 let currentRoundResults = document.querySelector('#current-round-results');
 currentRoundResults.textContent = 'Who will win...'
@@ -100,12 +99,12 @@ function displayGameOverScreen() {
   computerScoreSummary.innerHTML = `Player score: ${computerScore}`;
   const playAgainButton = document.getElementById('play-again-btn');
   // Start a new game, resetting rounds and scores to 0
-  playAgainButton.addEventListener('click', function playAgain(){
+  playAgainButton.addEventListener('click', function playAgain() {
     gameSummary.hidden = true;
     resetScores();
   });
 }
-    
+
 function win() {
   console.log('WINNER!!!');
   playerScore += 1;
@@ -147,7 +146,7 @@ async function playRound() {
   };
   loop();
   console.log(`Round: ${rounds}`);
-  
+
   const computerSelection = getComputerChoice();
   const computerChose = document.createElement('p');
   computerChose.classList.add('p');
