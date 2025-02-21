@@ -82,9 +82,7 @@ currentRoundResults.textContent = "And the current round result is..."
 
 function resetScores() {
   rounds = 1;
-  newPlayerScore = 0;
   playerScore = 0;
-  newComputerScore = 0;
   computerScore = 0;
   computerScoreCount.textContent = 'Computer: 0';
   playerScoreCount.textContent = 'Player: 0';
@@ -108,24 +106,21 @@ function displayGameOverScreen() {
   });
 }
     
-let newPlayerScore;
 function win() {
   console.log("WINNER!!!");
-  let newPlayerScore = playerScore + 1;
-  playerScoreCount.textContent = `Player's score: ${newPlayerScore}`;
+  playerScore += 1;
+  playerScoreCount.textContent = `Player's score: ${playerScore}`;
   currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
   return;
 }
-let newComputerScore;
+
 function lose() {
   console.log("LOSER!!!");
-  let newComputerScore = computerScore + 1;
-  computerScoreCount.textContent = `Computer's score: ${newComputerScore}`;
+  computerScore += 1;
+  computerScoreCount.textContent = `Computer's score: ${computerScore}`;
   currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
   return;
 }
-
-
 
 let playerSelection;
 
@@ -164,7 +159,7 @@ async function playRound() {
   turn.innerHTML = `
     <p>Player chose ${playerSelection}</p>
     <p>Computer chose ${computerSelection}</p>`;
-  if (rounds < 3) {
+  if (rounds <= 3) {
     if ((playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")) {
