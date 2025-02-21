@@ -88,6 +88,7 @@ function resetScores() {
   playerScoreCount.textContent = 'Player: 0';
   roundCounter.textContent = 'Round: 1';
   turn.innerHTML = '';
+  currentRoundResults.innerHTML = '';
 }
 
 function displayGameOverScreen() {
