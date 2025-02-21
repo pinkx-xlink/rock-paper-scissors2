@@ -64,12 +64,12 @@ turn.innerHTML = '<p>make your move...</p>';
 
 // create variables to keep track of player scores
 let playerScore = 0;
-playerScoreCount = document.createElement('p');
+const playerScoreCount = document.createElement('p');
 playerScoreCount.classList.add('p');
 playerScoreCount.textContent = `Player: ${playerScore}`;
 scores.appendChild(playerScoreCount);
 let computerScore = 0;
-computerScoreCount = document.createElement('p');
+const computerScoreCount = document.createElement('p');
 computerScoreCount.classList.add('p');
 computerScoreCount.textContent = `Computer: ${computerScore}`;
 scores.appendChild(computerScoreCount);
@@ -90,21 +90,7 @@ function resetScores() {
   currentRoundResults.innerHTML = '';
 }
 
-function displayGameOverScreen() {
-  // Get and unhide the game over screen, and display the final scores
-  const gameSummary = document.getElementById('game-summary');
-  document.getElementById('game-summary').hidden = false;
-  const playerScoreSummary = document.getElementById('player-score-summary');
-  playerScoreSummary.innerHTML = `Player score: ${playerScore}`;
-  const computerScoreSummary = document.getElementById('computer-score-summary');
-  computerScoreSummary.innerHTML = `Player score: ${computerScore}`;
-  const playAgainButton = document.getElementById('play-again-btn');
-  // Start a new game, resetting rounds and scores to 0
-  playAgainButton.addEventListener('click', function playAgain(){
-    gameSummary.hidden = true;
-    resetScores();
-  });
-}
+
     
 function win() {
   console.log('WINNER!!!');
