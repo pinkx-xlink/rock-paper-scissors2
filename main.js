@@ -164,17 +164,15 @@ async function playRound() {
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")) {
       return win();
-      displayWinner();
     } else if ((playerSelection === "scissors" && computerSelection === "rock") ||
     (playerSelection === "rock" && computerSelection === "paper") || 
     (playerSelection === "paper" && computerSelection === "scissors")) {
       return lose();
-      displayWinner();
     } else {
-      currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
+      currentRoundResults.innerHTML = `
+        <p> it's a tie :p </p>
+      `;
       console.log("TIE!");
     }
-      
-    
   };
 }; 
