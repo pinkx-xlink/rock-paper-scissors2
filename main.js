@@ -142,7 +142,6 @@ async function playRound() {
         displayGameOverScreen();
       }, 100);
       console.log('THE END');
-      roundCounter.innerHTML = `GAME OVER`;
     } else if (rounds < 3) {
       ++rounds;
       console.log("play again");
