@@ -19,7 +19,7 @@ function getPlayerChoice(buttonId) {
     playerSelection = 'scissors';
   }
   console.log(`player chose ${playerSelection}`);
-  getComputerChoice();
+  // getComputerChoice();
 }
 // create the variables for rock, paper, and scissors
 const rock = document.createElement('button');
@@ -110,16 +110,16 @@ function displayGameOverScreen() {
     
 let newPlayerScore;
 function win() {
-  console.log("You win!");
-  let newPlayerScore = (playerScore++);
+  console.log("WINNER!!!");
+  let newPlayerScore = playerScore + 1;
   playerScoreCount.textContent = `Player's score: ${newPlayerScore}`;
   currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
   return;
 }
 let newComputerScore;
 function lose() {
-  console.log("you lose lol");
-  let newComputerScore = (computerScore++);
+  console.log("LOSER!!!");
+  let newComputerScore = computerScore + 1;
   computerScoreCount.textContent = `Computer's score: ${newComputerScore}`;
   currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
   return;
@@ -153,9 +153,7 @@ async function playRound() {
     }
   };
   loop();
-
   console.log(`Round: ${rounds}`);
-  
   
   const computerSelection = getComputerChoice();
   const computerChose = document.createElement('p');
@@ -167,27 +165,21 @@ async function playRound() {
     <p>Player chose ${playerSelection}</p>
     <p>Computer chose ${computerSelection}</p>`;
   if (rounds < 3) {
-    if ((playerSelection) === "rock" && computerSelection == "scissors") {
+    if ((playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    (playerSelection === "scissors" && computerSelection === "paper")) {
       return win();
       displayWinner();
-    } else if ((playerSelection) === "paper" && computerSelection == "rock") {
-      return win();
-      displayWinner();
-    } else if ((playerSelection) === "scissors" && computerSelection == "paper") {
-      return win();
-      displayWinner();
-    } else if ((playerSelection) === "scissors" && computerSelection == "rock") {
+    } else if ((playerSelection === "scissors" && computerSelection === "rock") ||
+    (playerSelection === "rock" && computerSelection === "paper") || 
+    (playerSelection === "paper" && computerSelection === "scissors")) {
       return lose();
       displayWinner();
-    } else if ((playerSelection) === "rock" && computerSelection == "paper") {
-      return lose();
-      displayWinner();
-    } else if ((playerSelection) === "paper" && computerSelection == "scissors") {
-      return lose();
-      displayWinner();
-    } else { 
+    } else {
       currentRoundResults.innerHTML = `<p>it's a tie :p</p>`;
       console.log("TIE!");
-    }; 
+    }
+      
+    
   };
 }; 
