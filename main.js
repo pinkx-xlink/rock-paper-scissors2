@@ -2,6 +2,14 @@ const options = document.querySelector("#options");
 options.addEventListener("click", playRound);
 const scoreBoard = document.querySelector("#scoreBoard");
 const scores = document.getElementById('scores');
+
+// TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
+function getComputerChoice() {
+  // randomly choose 1 option which will serve as the computer's choice
+  const array = ["rock", "paper", "scissors"];
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 function getPlayerChoice(buttonId) {
   if (buttonId === 'rock') {
     playerSelection = 'rock';
@@ -11,6 +19,7 @@ function getPlayerChoice(buttonId) {
     playerSelection = 'scissors';
   }
   console.log(`player chose ${playerSelection}`);
+  getComputerChoice();
 }
 // create the variables for rock, paper, and scissors
 const rock = document.createElement('button');
@@ -79,7 +88,7 @@ function resetScores() {
   computerScore = 0;
   computerScoreCount.textContent = 'Computer: 0';
   playerScoreCount.textContent = 'Player: 0';
-  roundCounter.textContent = 'Round: ';
+  roundCounter.textContent = 'Round: 1';
   turn.innerHTML = '';
 }
 
@@ -102,7 +111,7 @@ function displayGameOverScreen() {
 let newPlayerScore;
 function win() {
   console.log("You win!");
-  let newPlayerScore = (++playerScore);
+  let newPlayerScore = (playerScore++);
   playerScoreCount.textContent = `Player's score: ${newPlayerScore}`;
   currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
   return;
@@ -110,7 +119,7 @@ function win() {
 let newComputerScore;
 function lose() {
   console.log("you lose lol");
-  let newComputerScore = (++computerScore);
+  let newComputerScore = (computerScore++);
   computerScoreCount.textContent = `Computer's score: ${newComputerScore}`;
   currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
   return;
@@ -120,39 +129,33 @@ function lose() {
 
 let playerSelection;
 
-let rounds = 0; 
+let currentRound;
+let rounds = 1; 
 const roundCounter = document.getElementById('roundcounter');
-roundCounter.innerHTML = `Round: `
+roundCounter.innerHTML = `Round: 1`
 function updateRoundCounter() {
-  roundCounter.textContent = `Round: ${rounds + 1}`;
+  roundCounter.textContent = `Round: ${rounds}`;
 }
 
 async function playRound() {
   await getPlayerChoice()
   let loop = function () {
-    if ((rounds + 1) <= 3) {
-      ++rounds;
-      console.log("play again");
-    } else if ((rounds + 1) === 3) {
-      alert('blap');
-    } else if ((rounds + 1) === 4) {
+    if (rounds === 3) {
       setTimeout(() => {
         console.log('reset that shit after 2 second');
         displayGameOverScreen();
-      }, 1000);
+      }, 100);
       console.log('THE END');
       roundCounter.innerHTML = `GAME OVER`;
+    } else if (rounds < 3) {
+      ++rounds;
+      console.log("play again");
     }
   };
   loop();
 
   console.log(`Round: ${rounds}`);
-  // TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
-  function getComputerChoice() {
-    // randomly choose 1 option which will serve as the computer's choice
-    const array = ["rock", "paper", "scissors"];
-    return array[Math.floor(Math.random() * array.length)];
-  }
+  
   
   const computerSelection = getComputerChoice();
   const computerChose = document.createElement('p');
