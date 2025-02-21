@@ -81,7 +81,7 @@ currentRoundResults.textContent = "And the current round result is..."
 // currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
-  rounds = 0;
+  rounds = 1;
   newPlayerScore = 0;
   playerScore = 0;
   newComputerScore = 0;
@@ -166,7 +166,7 @@ async function playRound() {
   turn.innerHTML = `
     <p>Player chose ${playerSelection}</p>
     <p>Computer chose ${computerSelection}</p>`;
-  if ((rounds + 1) <= 3) {
+  if (rounds < 3) {
     if ((playerSelection) === "rock" && computerSelection == "scissors") {
       return win();
       displayWinner();
