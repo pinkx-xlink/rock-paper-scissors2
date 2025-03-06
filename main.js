@@ -3,16 +3,14 @@ const playGameBtn = document.getElementById('start-game-button')
 playGameBtn.addEventListener('click', 
   function() {
     playGameBtn.classList.add('hide-start-game-btn')
-  // e.preventDefault();
-  alert('howdy partner');
-  gameboard.classList.remove('hidden');
-})
+    gameboard.classList.remove('hidden');
+  }
+);
 
 const options = document.querySelector('#options');
 options.addEventListener('click', playRound);
 const scores = document.getElementById('scores');
 
-// TRY UNCOUPLING GETCOMPCHOICE FUNC FROM INSIDE THIS LOOP
 function getComputerChoice() {
   // randomly choose 1 option which will serve as the computer's choice
   const array = ['rock', 'paper', 'scissors'];
@@ -27,8 +25,6 @@ function getPlayerChoice(buttonId) {
   } else if (buttonId === 'scissors') {
     playerSelection = 'scissors';
   }
-  console.log(`player chose ${playerSelection}`);
-  // getComputerChoice();
 }
 // create the variables for rock, paper, and scissors
 const rock = document.createElement('button');
@@ -116,7 +112,6 @@ function displayGameOverScreen() {
 }
 
 function win() {
-  console.log('WINNER!!!');
   playerScore += 1;
   playerScoreCount.textContent = `Player's score: ${playerScore}`;
   currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
@@ -124,7 +119,6 @@ function win() {
 }
 
 function lose() {
-  console.log('LOSER!!!');
   computerScore += 1;
   computerScoreCount.textContent = `Computer's score: ${computerScore}`;
   currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
@@ -145,23 +139,18 @@ async function playRound() {
   let loop = function () {
     if (rounds === 3) {
       setTimeout(() => {
-        console.log('reset that shit after 2 second');
         displayGameOverScreen();
       }, 100);
-      console.log('THE END');
     } else if (rounds < 3) {
       ++rounds;
-      console.log('play again');
     }
   };
   loop();
-  console.log(`Round: ${rounds}`);
 
   const computerSelection = getComputerChoice();
   const computerChose = document.createElement('p');
   computerChose.classList.add('p');
   computerChose.textContent = `Computer chose: ${computerSelection}`;
-  console.log(`Computer chose ${computerSelection}`);
 
   turn.innerHTML = `
     <p>Player chose ${playerSelection}</p>
@@ -179,7 +168,6 @@ async function playRound() {
       currentRoundResults.innerHTML = `
         <p> it's a tie :p </p>
       `;
-      console.log('TIE!');
     }
   };
 }; 
