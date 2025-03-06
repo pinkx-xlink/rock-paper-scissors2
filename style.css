@@ -2,6 +2,10 @@
     font-family: Silkscreen, sans-serif;
 }
 
+.hide-start-game-btn {
+    display: none;
+}
+
 @keyframes colorChange {
     0% { color: red; }
     50% { color: yellow; }

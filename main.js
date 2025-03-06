@@ -1,3 +1,11 @@
+const playGameBtn = document.getElementById('start-game-button')
+playGameBtn.addEventListener('click', 
+  function() {
+    playGameBtn.classList.add('hide-start-game-btn')
+  // e.preventDefault();
+  alert('howdy partner');
+})
+
 const options = document.querySelector('#options');
 options.addEventListener('click', playRound);
 const scores = document.getElementById('scores');
