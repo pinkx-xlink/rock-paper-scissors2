@@ -100,6 +100,8 @@ function resetScores() {
 }
 
 function displayGameOverScreen() {
+  gameboard.classList.add('hidden');
+  playGameBtn.classList.remove('hide-start-game-btn')
   // Get and unhide the game over screen, and display the final scores
   const gameSummary = document.getElementById('game-summary');
   document.getElementById('game-summary').hidden = false;
