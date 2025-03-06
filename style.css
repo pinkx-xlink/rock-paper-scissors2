@@ -6,6 +6,10 @@
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
 @keyframes colorChange {
     0% { color: red; }
     50% { color: yellow; }

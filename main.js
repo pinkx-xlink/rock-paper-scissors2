@@ -1,9 +1,11 @@
+const gameboard = document.getElementById('gameboard');
 const playGameBtn = document.getElementById('start-game-button')
 playGameBtn.addEventListener('click', 
   function() {
     playGameBtn.classList.add('hide-start-game-btn')
   // e.preventDefault();
   alert('howdy partner');
+  gameboard.classList.remove('hidden');
 })
 
 const options = document.querySelector('#options');
