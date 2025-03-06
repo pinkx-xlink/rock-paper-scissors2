@@ -86,7 +86,6 @@ scores.appendChild(computerScoreCount);
 
 let currentRoundResults = document.querySelector('#current-round-results');
 currentRoundResults.textContent = 'Who will win...'
-// currentRoundResults.innerHTML = `<p>And the currentRoundResults is.....</p>`;
 
 function resetScores() {
   rounds = 1;
@@ -102,8 +101,6 @@ function resetScores() {
 
 function displayGameOverScreen() {
   gameboard.classList.add('hidden');
-  // playGameBtn.classList.remove('hide-start-game-btn')
-  // Get and unhide the game over screen, and display the final scores
   const gameSummary = document.getElementById('game-summary');
   document.getElementById('game-summary').hidden = false;
   const playerScoreSummary = document.getElementById('player-score-summary');
