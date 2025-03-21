@@ -83,3 +83,8 @@ I also added a two second delay between the "Game Over" text and the "play again
 
 I plan on putting some more elbow grease into the CSS design later... maybe. I originally was going for a "retro" design, and while the CSS is basic I feel like I've met my original goal. 
 We'll see!
+
+
+3/21/25
+Hand img: Photo by <a href="https://unsplash.com/@imanitor?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fadilah Im</a> on <a href="https://unsplash.com/photos/person-showing-peace-sign-hand-gesture-2HkXcDPnGh4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
