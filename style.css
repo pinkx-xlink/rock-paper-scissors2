@@ -10,16 +10,23 @@
     50% { background-color: yellow; }
     100% { background-color: orange; }
 }
-.start-game-button {
+#start-game-button {
     width: 200px;
+    height: 120px;
     animation: bgColorChange 2s infinite;
 }
-.start-game-button > a:hover {
-    background-color: blue;
+@keyframes bgHoverColorChange {
+    0% { background-color: rgb(100, 3, 3); }
+    50% { background-color: rgb(109, 109, 1); }
+    100% { background-color: rgb(119, 79, 3); }
+}
+#start-game-button:hover {
+    animation: bgHoverColorChange 2s infinite;
 }
 .start-game > button > a {
     text-decoration: none;
-    
+    color: black;
+    font-size: xx-large;
 }
 .hide-start-game-btn {
     display: none;
