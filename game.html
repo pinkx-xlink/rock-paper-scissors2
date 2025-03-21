@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Silkscreen">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <h1>BOOADKJNSDKFJNKJ</h1>
+    <body>
+        <div id="gameboard">
+            <h1>✂️ Rock, Paper, SCISSORS! ✂️</h1>
+            
+            <!-- <button id="play">Play Game?</button> -->
+            <!-- "onclick", game() removed but maybe add back later -->
+            <div id="scoreBoard">
+                <p id="roundcounter"></p>
+                <div id="scores"></div>
+            </div>
+            <div id="turn"> </div>
+            <div id="current-round-results"></div>
+            <div id="options"></div>
+        </div>
+        <div id="game-summary" hidden>GAME OVER, NERD
+            <p id="player-score-summary"></p>
+            <p id="computer-score-summary"></p>
+            <button id="play-again-btn">Play Again?</button>
+        </div>
+        
 </body>
 </html>
