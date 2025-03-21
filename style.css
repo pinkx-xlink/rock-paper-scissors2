@@ -1,7 +1,26 @@
 * {
     font-family: Silkscreen, sans-serif;
 }
-
+.start-game {
+    position: absolute;
+    margin: 50% 0 0 90%;
+}
+@keyframes bgColorChange {
+    0% { background-color: red; }
+    50% { background-color: yellow; }
+    100% { background-color: orange; }
+}
+.start-game-button {
+    width: 200px;
+    animation: bgColorChange 2s infinite;
+}
+.start-game-button > a:hover {
+    background-color: blue;
+}
+.start-game > button > a {
+    text-decoration: none;
+    
+}
 .hide-start-game-btn {
     display: none;
 }
@@ -15,6 +34,7 @@
     50% { color: yellow; }
     100% { color: orange; }
 }
+
 body {
     background-image: radial-gradient(black, rgb(15, 8, 8));
     align-items: center;
@@ -55,7 +75,7 @@ h1 {
 .player-options-buttons:hover {
     cursor:pointer;
 }
-button {
+#options > button {
     min-height: 50px;
     height: 80px;
     min-width: 50px;
@@ -64,7 +84,7 @@ button {
     border: 5px ridge white;
     border-radius: 5px;
 }
-button:hover {
+#options > button:hover {
     background-image:radial-gradient(white, white, white, yellow);
     box-shadow: white -5px 5px 15px;
     animation: shaking 0.2s;}
