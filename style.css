@@ -3,8 +3,9 @@
 }
 .start-game {
     position: absolute;
-    margin: 50% 0 0 90%;
+    margin: 500px 0 0 850px;
 }
+
 @keyframes bgColorChange {
     0% { background-color: red; }
     50% { background-color: yellow; }
@@ -27,9 +28,6 @@
     text-decoration: none;
     color: black;
     font-size: xx-large;
-}
-.hide-start-game-btn {
-    display: none;
 }
 
 .hidden {
