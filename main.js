@@ -134,7 +134,7 @@ async function playRound() {
     if (rounds === 3) {
       setTimeout(() => {
         displayGameOverScreen();
-      }, 100);
+      }, 1000);
     } else if (rounds < 3) {
       ++rounds;
     }
