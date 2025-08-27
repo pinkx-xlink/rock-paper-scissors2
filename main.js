@@ -78,7 +78,7 @@ let currentRoundResults = document.querySelector('#current-round-results');
 currentRoundResults.textContent = 'Who will win...'
 
 function resetScores() {
-  rounds = 1;
+  rounds = 0;
   playerScore = 0;
   computerScore = 0;
   computerScoreCount.textContent = 'Computer: 0';
@@ -121,7 +121,7 @@ function lose() {
 
 let playerSelection;
 
-let rounds = 1;
+let rounds = 0;
 const roundCounter = document.getElementById('roundcounter');
 roundCounter.innerHTML = 'Round: 1';
 function updateRoundCounter() {
@@ -136,7 +136,7 @@ async function playRound() {
         displayGameOverScreen();
       }, 1000);
     } else if (rounds < 3) {
-      ++rounds;
+      rounds++;
     }
   };
   loop();
