@@ -1,9 +1,16 @@
 * {
     font-family: Silkscreen, sans-serif;
 }
+.start-game__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start-game__image {
+    border-radius: 25px;
+}
 .start-game {
-    position: absolute;
-    margin: 500px 0 0 850px;
+    margin-top: 25px;
 }
 
 @keyframes bgColorChange {
