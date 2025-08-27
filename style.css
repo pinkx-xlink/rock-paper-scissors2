@@ -123,6 +123,7 @@ h1 {
     font-weight: bolder;
     font-size: larger;
     width: 500px;
+    margin-bottom: 45px;
 }
 
 #scores {
