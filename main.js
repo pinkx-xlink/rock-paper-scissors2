@@ -78,7 +78,7 @@ let currentRoundResults = document.querySelector('#current-round-results');
 currentRoundResults.textContent = 'Who will win...'
 
 function resetScores() {
-  rounds = 0;
+  rounds = 1;
   playerScore = 0;
   computerScore = 0;
   computerScoreCount.textContent = 'Computer: 0';
@@ -108,20 +108,22 @@ function displayGameOverScreen() {
 function win() {
   playerScore += 1;
   playerScoreCount.textContent = `Player's score: ${playerScore}`;
-  currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
+  // currentRoundResults.innerHTML = `<p> You Win round ${rounds}! </p>`;
+  currentRoundResults.innerHTML = `<p> You Win! </p>`;
   return;
 }
 
 function lose() {
   computerScore += 1;
   computerScoreCount.textContent = `Computer's score: ${computerScore}`;
-  currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
+  //currentRoundResults.innerHTML = `<p>You LOST round ${rounds}! ):</p>`;
+   currentRoundResults.innerHTML = `<p>You LOST! ):</p>`;
   return;
 }
 
 let playerSelection;
 
-let rounds = 0;
+let rounds = 1;
 const roundCounter = document.getElementById('roundcounter');
 roundCounter.innerHTML = 'Round: 1';
 function updateRoundCounter() {
